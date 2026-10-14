@@ -125,6 +125,7 @@ export default function Hero() {
                   alt="Sohail"
                   width={400}
                   height={400}
+                  priority
                   className="h-full w-full scale-[2.2] object-cover object-[50%_30%] origin-[46%_10%]"
                 />
               </div>
