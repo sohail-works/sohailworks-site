@@ -2,8 +2,12 @@
 import { GridPattern } from "@/components/ui/grid-pattern";
 import { Particles } from "@/components/ui/particles";
 import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
 
 export default function Hero() {
+  const cardRef = useRef(null);
+  const [qty, setQty] = useState(100);
+
   const itemsInfo = [
     {
       label: "EXPERIENCE",
@@ -23,48 +27,75 @@ export default function Hero() {
       value: "Pakistan",
     },
   ];
+
+  const handleMouseMove = (e) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    card.style.transform = `perspective(1000px) rotateX(${-y * 12}deg) rotateY(${x * 12}deg)`;
+  };
+
+  const handleMouseLeave = () => {
+    if (cardRef.current) {
+      cardRef.current.style.transform =
+        "perspective(1000px) rotateX(0deg) rotateY(0deg)";
+    }
+  };
+
+  useEffect(() => {
+  const update = () => {
+    const newQty = window.innerWidth < 768 ? 30 : 100;
+    console.log('Width:', window.innerWidth, 'Qty:', newQty);
+    setQty(newQty);
+  };
+  update();
+  window.addEventListener("resize", update);
+  return () => window.removeEventListener("resize", update);
+}, []);
   return (
     <section id="home" className="relative overflow-hidden ">
       {/* Background layer — */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        {/* Dark mode */}
-        <Particles
-          className="absolute inset-0 hidden dark:block"
-          quantity={100}
-          color="#ffffff"
-          vy={-0.5}
-        />
-        {/* Light mode */}
-
         <GridPattern
           width={40}
           height={40}
           className="text-[var(--border-strong)] opacity-60 [mask-image:radial-gradient(ellipse_at_center,white_30%,transparent_80%)]"
         />
-
+        {/* Dark mode */}
         <Particles
-          className="absolute inset-0 dark:hidden"
-          quantity={100}
+          className="absolute inset-0 invisible dark:visible"
+          key={qty}
+          quantity={qty}
+          color="#ffffff"
+          vy={-0.5}
+        />
+        {/* Light mode */}
+        <Particles
+          className="absolute inset-0 dark:invisible"
+          key={qty}
+          quantity={qty}
           color="#0F172A"
           vy={-0.5}
         />
       </div>
-      <div className="grid grid-cols-1 m-8 mt-18 2xl:mt-32 items-center gap-12 text-center md:grid-cols-2 md:text-left">
+      <div className="grid grid-cols-1 m-8 mt-8 md:mt-18 2xl:mt-32 items-center gap-12 text-center md:grid-cols-2 md:text-left">
         {/* ── Left column ── */}
         <div className="space-y-6 ">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-4 py-1.5">
+          <div className="<div mx-auto flex w-fit items-center gap-2 md:mx-0 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-4 py-1.5">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
             </span>
-            <span className="font-mono text-xs font-medium uppercase tracking-widest text-[var(--primary)]">
+            <span className="whitespace-nowrap font-mono text-[10px] md:text-xs font-medium uppercase tracking-normal md:tracking-widest text-[var(--primary)]">
               Hello, I&apos;m Sohail — Available for projects
             </span>
           </div>
 
           {/* Heading */}
-          <h1 className="font-display text-center text-2xl font-normal capitalize md:text-left md:text-6xl md:leading-tight">
+          <h1 className="font-display text-center text-3xl font-normal capitalize leading-snug md:text-left md:text-6xl md:leading-tight">
             I build top websites
             <br />
             that win clients
@@ -115,8 +146,18 @@ export default function Hero() {
 
         {/* ── Right column ── */}
         <div className="relative flex items-center justify-center">
+          {/* Card Glow on moving */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#F97316] opacity-25 blur-3xl"
+          />
           {/* ── Glass ID column ── */}
-          <div className="w-full max-w-sm rounded-3xl border border-white/10 bg-white/[0.06] p-8 shadow-2xl backdrop-blur-xl">
+          <div
+            ref={cardRef}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            className="w-full max-w-sm rounded-3xl border border-white/10 bg-white/[0.06] p-8 shadow-2xl backdrop-blur-xl transition-transform duration-150"
+          >
             {/* ── Profile Image Card Div ── */}
             <div className="mx-auto h-28 w-28 rounded-full bg-gradient-brand p-[3px]">
               <div className="h-full w-full overflow-hidden rounded-full">
@@ -149,19 +190,26 @@ export default function Hero() {
                   <p className="font-mono text-[9px] tracking-widest text-gray-500 dark:text-gray-400 ">
                     {item.label}
                   </p>
-                  <p className="mt-1 text-sm font-semibold text-[var(--text-primary)]">
-                  {item.dot && (
-                    <span className="relative mr-1.5 inline-flex h-2 w-2">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
-                      <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
-                    </span>
-                  )}
-                  
+                  <p className="mt-1 whitespace-nowrap text-xs sm:text-sm font-semibold text-[var(--text-primary)]">
+                    {item.dot && (
+                      <span className="relative mr-1.5 inline-flex h-2 w-2">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
+                        <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+                      </span>
+                    )}
+
                     {item.value}
                   </p>
                 </div>
               ))}
             </div>
+
+            {/* ── Adding Divider ── */}
+            <div className="my-4 h-px bg-black/10 dark:bg-white/10" />
+            {/* ── Adding ID Text ── */}
+            <p className="text-center font-mono text-[10px] tracking-[0.2em] text-gray-500 dark:text-gray-400">
+              SW-2026-PRO
+            </p>
           </div>
         </div>
       </div>

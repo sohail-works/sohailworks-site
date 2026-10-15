@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en"  className={`${spaceGrotesk.variable} ${jakarta.variable} ${jetbrains.variable}`}>
+    <html lang="en"  className= {` scroll-smooth ${spaceGrotesk.variable} ${jakarta.variable} ${jetbrains.variable}`}>
       <body>
       <Navbar />
       <CustomCursor />

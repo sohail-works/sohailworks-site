@@ -43,15 +43,14 @@ export default function CustomCursor() {
 
     // ── Links/buttons par ring bara ho jata hai ──
     function onMouseOver(e) {
-  const interactive = e.target.closest("a, button");
-  if (interactive) {
-    // Hover par ring foran mouse par snap (trail khatam, sab par same feel)
-    ringX = mouseX;
-    ringY = mouseY;
-  }
-  ring.classList.toggle("scale-105", !!interactive);
-  ring.classList.toggle("bg-[var(--primary-light)]", !!interactive);
-}
+      const interactive = e.target.closest("a, button");
+      if (interactive) {
+        ringX = mouseX;
+        ringY = mouseY;
+      }
+      ring.classList.toggle("scale-105", !!interactive);
+      ring.classList.toggle("bg-[var(--primary-light)]", !!interactive);
+    }
 
     window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("mouseover", onMouseOver);
