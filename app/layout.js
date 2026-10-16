@@ -2,6 +2,7 @@ import { Space_Grotesk, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/goog
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
+import WhatsappButton from "@/components/WhatsAppButton";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--font-display" });
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-body" });
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <Navbar />
       <CustomCursor />
       {children}
+      <WhatsappButton />
       </body>
     </html>
   );

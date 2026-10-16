@@ -1,6 +1,7 @@
 "use client";
 import { GridPattern } from "@/components/ui/grid-pattern";
 import { Particles } from "@/components/ui/particles";
+import { Clock, Rocket, DollarSign, Star } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
@@ -20,11 +21,39 @@ export default function Hero() {
     },
     {
       label: "SPECIALITY",
-      value: "Web Development",
+      value: "Web Dev",
     },
     {
       label: "LOCATION",
       value: "Pakistan",
+    },
+  ];
+
+  const stats = [
+    {
+      icon: Clock,
+      value: "5+",
+      label: "Years Experience",
+      sub: "Since 2021",
+    },
+    {
+      icon: Rocket,
+      value: "100+",
+      label: "Projects Completed",
+      sub: "WordPress, GHL & React",
+    },
+    {
+      icon: DollarSign,
+      value: "$15k+",
+      label: "Earned",
+      sub: "Fiverr & Upwork",
+    },
+    {
+      icon: Star,
+      value: "4.8",
+      suffix: "/5.0",
+      label: "Client Rating",
+      sub: "Verified 5-Star Reviews",
     },
   ];
 
@@ -45,15 +74,15 @@ export default function Hero() {
   };
 
   useEffect(() => {
-  const update = () => {
-    const newQty = window.innerWidth < 768 ? 30 : 100;
-    console.log('Width:', window.innerWidth, 'Qty:', newQty);
-    setQty(newQty);
-  };
-  update();
-  window.addEventListener("resize", update);
-  return () => window.removeEventListener("resize", update);
-}, []);
+    const update = () => {
+      const newQty = window.innerWidth < 768 ? 30 : 100;
+      console.log("Width:", window.innerWidth, "Qty:", newQty);
+      setQty(newQty);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
   return (
     <section id="home" className="relative overflow-hidden ">
       {/* Background layer — */}
@@ -66,7 +95,7 @@ export default function Hero() {
         {/* Dark mode */}
         <Particles
           className="absolute inset-0 invisible dark:visible"
-          key={qty}
+          key={`dark-${qty}`}
           quantity={qty}
           color="#ffffff"
           vy={-0.5}
@@ -74,7 +103,7 @@ export default function Hero() {
         {/* Light mode */}
         <Particles
           className="absolute inset-0 dark:invisible"
-          key={qty}
+          key={`light-${qty}`}
           quantity={qty}
           color="#0F172A"
           vy={-0.5}
@@ -212,6 +241,34 @@ export default function Hero() {
             </p>
           </div>
         </div>
+      </div>
+      {/* ── Stats strip ── */}
+      <div className="mt-14 grid grid-cols-1 gap-6 px-6 sm:px-0 lg:grid-cols-4">
+        {stats.map((stat, index) => (
+          <div
+            key={index}
+            className="group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-[#6E73BE]/60 hover:shadow-[0_0_25px_rgba(110,115,190,0.25)]"
+          >
+            <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full bg-[#6E73BE]/10 blur-xl transition-all duration-300 group-hover:bg-[#6E73BE]/25"></div>
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#6E73BE]/30 bg-[#6E73BE]/10 text-[#6E73BE] transition-transform duration-300 group-hover:scale-110">
+                <stat.icon />
+              </div>
+              <div className="flex flex-col gap-1 text-left">
+                <p className="font-display text-3xl font-bold tracking-tight text-[var(--text-primary)]">
+                  {stat.value}
+                  {stat.suffix && (
+                    <span className="text-[#6E73BE]">{stat.suffix}</span>
+                  )}
+                </p>
+                <p className="text-base font-medium text-[var(--text-primary)]">
+                  {stat.label}
+                </p>
+                <p className="text-sm text-white/60">{stat.sub}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
