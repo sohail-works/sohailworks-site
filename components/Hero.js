@@ -205,7 +205,7 @@ export default function Hero() {
               Sohail
             </h3>
 
-            <p className="mx-auto mt-2 w-fit whitespace-nowrap rounded-full border border-black/10 bg-black/5 px-3 py-1 text-center font-mono text-xs text-[var(--primary)] dark:border-white/10 dark:bg-white/5">
+            <p className="mx-auto mt-2 w-fit whitespace-nowrap rounded-full border border-black/10 bg-black/5 px-2 md:px-3 py-1 text-center font-mono text-[10px] text-[var(--primary)] dark:border-white/10 dark:bg-white/5">
               WordPress, GHL & React Developer
             </p>
 
