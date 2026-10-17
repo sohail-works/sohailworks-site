@@ -194,9 +194,9 @@ header {
   transition-delay: 60ms;
 }
 
-html, a, button {
+/* html, a, button {
   cursor: none;
-}
+} */
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
