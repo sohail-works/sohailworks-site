@@ -166,7 +166,7 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="rounded-xl border border-[var(--border-default)] px-6 py-3 font-medium text-[var(--text-primary)] transition-all hover:-translate-y-1 hover:border-[var(--primary)] hover:text-[var(--primary)]"
+              className="rounded-xl border border-[var(--border-default)] px-6 py-3 font-medium text-[var(--text-primary)] transition-all hover:-translate-y-1 hover:border-[var(--primary)] hover:text-[var(--primary)] md:active:scale-95"
             >
               Hire Me
             </a>
