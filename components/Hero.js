@@ -160,13 +160,13 @@ export default function Hero() {
           <div className="flex gap-4 justify-center md:justify-start">
             <a
               href="#portfolio"
-              className="rounded-xl bg-[var(--secondary)] px-6 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:bg-[var(--secondary-hover)]"
+              className="rounded-xl bg-[var(--secondary)] px-6 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:bg-[var(--secondary-hover)] active:scale-95"
             >
               View My Work
             </a>
             <a
               href="#contact"
-              className="rounded-xl border border-[var(--border-default)] px-6 py-3 font-medium text-[var(--text-primary)] transition-all hover:-translate-y-1 hover:border-[var(--primary)] hover:text-[var(--primary)] md:active:scale-95"
+              className="rounded-xl border border-[var(--border-default)] px-6 py-3 font-medium text-[var(--text-primary)] transition-all hover:-translate-y-1 hover:border-[var(--primary)] hover:text-[var(--primary)] touch-manipulation active:scale-95"
             >
               Hire Me
             </a>
