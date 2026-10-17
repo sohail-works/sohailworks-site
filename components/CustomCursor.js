@@ -6,7 +6,7 @@ export default function CustomCursor() {
   // ─── Refs: mousemove par re-render nahi, direct DOM update (fast) ───
   const dotRef = useRef(null);
   const ringRef = useRef(null);
-  const [enabled, setEnabled] = useState(false);
+  const [enabled, setEnabled] = useState(true);
 
   // ─── Step 1: sirf mouse wale devices par enable karo ───
   useEffect(() => {
