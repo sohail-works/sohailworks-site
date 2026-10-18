@@ -40,6 +40,7 @@ export default function Navbar() {
   }
 
   return (
+    <>
     // ─── Header: sticky + glass effect ───
     <header className="sticky top-0 z-50 border-b border-[var(--border-subtle)] bg-[var(--bg-base)]/70 backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -131,11 +132,7 @@ export default function Navbar() {
 
       {/* ── Mobile dropdown: overlay panel, diagonal open/close animation ── */}
       {/* Always rendered (never unmounted) so close animation can play */}
-      <div
-        className={`absolute left-0 right-0 top-full z-50 origin-top-right border-b border-[var(--border-subtle)] bg-[var(--bg-base)] transition-all duration-300 md:hidden ${
-          open ? "scale-100 opacity-100" : "pointer-events-none scale-0 opacity-0"
-        }`}
-      >
+      
         <ul className="space-y-1 px-6 py-4">
           {links.map((link) => (
             <li key={link.href}>
@@ -167,7 +164,7 @@ export default function Navbar() {
             Get Quote
           </Link>
         </div>
-      </div>
+    
 
       {/* ── Mobile menu overlay: dull bg, click to close ── */}
       <div
@@ -178,5 +175,12 @@ export default function Navbar() {
         }`}
       />
     </header>
+    <div
+        className={`absolute left-0 right-0 top-full z-50 origin-top-right border-b border-[var(--border-subtle)] bg-[var(--bg-base)] transition-all duration-300 md:hidden ${
+          open ? "scale-100 opacity-100" : "pointer-events-none scale-0 opacity-0"
+        }`}
+      ></div>
+    
+    </>
   );
 }
