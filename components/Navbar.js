@@ -1,7 +1,7 @@
 "use client";
 
-// ─── Imports ───
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 import { Sun, Moon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -20,6 +20,18 @@ export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false); // theme icon state
   const [active, setActive] = useState("/#home"); // highlighted nav link
   const [open, setOpen] = useState(false); // mobile menu open/close
+
+  // ─── Scroll lock: menu open ho to website scroll na ho ───
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   // ─── Theme toggle: flips `dark` class on <html>, CSS variables handle colors ───
   function toggleMode() {
@@ -120,7 +132,7 @@ export default function Navbar() {
       {/* ── Mobile dropdown: overlay panel, diagonal open/close animation ── */}
       {/* Always rendered (never unmounted) so close animation can play */}
       <div
-        className={`absolute left-0 right-0 top-full origin-top-right border-b border-[var(--border-subtle)] bg-[var(--bg-base)] transition-all duration-300 md:hidden ${
+        className={`absolute left-0 right-0 top-full z-50 origin-top-right border-b border-[var(--border-subtle)] bg-[var(--bg-base)] transition-all duration-300 md:hidden ${
           open ? "scale-100 opacity-100" : "pointer-events-none scale-0 opacity-0"
         }`}
       >
@@ -156,6 +168,15 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
+
+      {/* ── Mobile menu overlay: dull bg, click to close ── */}
+      <div
+        onClick={() => setOpen(false)}
+        aria-hidden="true"
+        className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 md:hidden ${
+          open ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+      />
     </header>
   );
 }
