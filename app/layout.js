@@ -7,7 +7,7 @@ import WhatsappButton from "@/components/WhatsAppButton";
 const spaceGrotesk = localFont({
   src: "./fonts/SpaceGrotesk-VariableFont_wght.ttf",
   variable: "--font-display",
-  weight: "300 700",
+  weight: "300 400 700",
 });
 
 const jakarta = localFont({
