@@ -41,7 +41,7 @@ export default function Navbar() {
 
   return (
     <>
-    // ─── Header: sticky + glass effect ───
+    {/* ─── Header: sticky + glass effect ───*/}
     <header className="sticky top-0 z-50 border-b border-[var(--border-subtle)] bg-[var(--bg-base)]/70 backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* ── Logo: image + gradient brand text ── */}
