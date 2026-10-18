@@ -1,12 +1,26 @@
-import { Space_Grotesk, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import WhatsappButton from "@/components/WhatsAppButton";
 
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--font-display" });
-const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-body" });
-const jetbrains = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono" });
+const spaceGrotesk = localFont({
+  src: "./fonts/SpaceGrotesk-VariableFont_wght.ttf",
+  variable: "--font-display",
+  weight: "300 700",
+});
+
+const jakarta = localFont({
+  src: "./fonts/PlusJakartaSans-VariableFont_wght.ttf",
+  variable: "--font-body",
+  weight: "200 800",
+});
+
+const jetbrains = localFont({
+  src: "./fonts/JetBrainsMono-VariableFont_wght.ttf",
+  variable: "--font-mono",
+  weight: "100 800",
+});
 
 export const metadata = {
   title: "Sohail — WordPress, GoHighLevel & React Developer",
