@@ -112,7 +112,7 @@ export default function Hero() {
           vy={-0.5}
         />
       </div>
-      <div className="grid grid-cols-1 m-8 mt-8 md:mt-18 2xl:mt-32 items-center gap-12 text-center md:grid-cols-2 md:text-left">
+      <div className="grid grid-cols-1 m-8 md:mt-18 2xl:mt-32 items-center gap-12 text-center md:grid-cols-2 md:text-left">
         {/* ── Left column ── */}
         <div className="space-y-6 ">
           {/* Badge */}
@@ -250,7 +250,7 @@ export default function Hero() {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="group relative h-full overflow-hidden rounded-2xl border border-black/10 bg-black/[0.04] p-5 md:backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-[#6E73BE]/60 hover:shadow-[0_0_25px_rgba(110,115,190,0.25)] dark:border-white/10 dark:bg-white/[0.04] active:-translate-y-1 active:border-[#6E73BE]/60"
+            className="group relative h-full overflow-hidden rounded-2xl border border-black/10 bg-black/[0.04] p-5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#6E73BE]/60 hover:shadow-[0_0_25px_rgba(110,115,190,0.25)] dark:border-white/10 dark:bg-white/[0.04] active:-translate-y-1 active:border-[#6E73BE]/60"
           >
             <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full bg-[#6E73BE]/10 blur-xl transition-all duration-300 group-hover:bg-[#6E73BE]/25"></div>
             <div className="flex items-center gap-4">
