@@ -6,18 +6,21 @@ import WhatsappButton from "@/components/WhatsAppButton";
 
 const spaceGrotesk = localFont({
   src: "./fonts/SpaceGrotesk-VariableFont_wght.woff2",
+  display: "swap",
   variable: "--font-display",
   weight: "300 400 700",
 });
 
 const jakarta = localFont({
   src: "./fonts/PlusJakartaSans-VariableFont_wght.woff2",
+  display: "swap",
   variable: "--font-body",
   weight: "200 800",
 });
 
 const jetbrains = localFont({
   src: "./fonts/JetBrainsMono-VariableFont_wght.woff2",
+  display: "swap",
   variable: "--font-mono",
   weight: "100 800",
 });
