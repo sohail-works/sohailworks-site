@@ -1,8 +1,29 @@
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import WhatsappButton from "@/components/WhatsAppButton";
 
+const spaceGrotesk = localFont({
+  src: "./fonts/SpaceGrotesk-VariableFont_wght.woff2",
+  display: "swap",
+  variable: "--font-display",
+  weight: "300 700",
+});
+
+const jakarta = localFont({
+  src: "./fonts/PlusJakartaSans-VariableFont_wght.woff2",
+  display: "swap",
+  variable: "--font-body",
+  weight: "200 800",
+});
+
+const jetbrains = localFont({
+  src: "./fonts/JetBrainsMono-VariableFont_wght.woff2",
+  display: "swap",
+  variable: "--font-mono",
+  weight: "100 800",
+});
 
 export const metadata = {
   title: "Sohail — WordPress, GoHighLevel & React Developer",
@@ -11,12 +32,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en"  className= {` scroll-smooth `}>
-    <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-</head>
+    <html lang="en"  className= {` scroll-smooth ${spaceGrotesk.variable} ${jakarta.variable} ${jetbrains.variable}`}>
       <body>
       <Navbar />
       <CustomCursor />

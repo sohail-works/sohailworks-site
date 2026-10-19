@@ -51,11 +51,6 @@
 }
 
 :root {
-  /* Fonts */
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-
   /* Brand */
   --primary: #F97316;
   --primary-hover: #EA580C;
@@ -171,7 +166,7 @@
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
@@ -189,6 +184,8 @@ body {
   color: var(--text-primary);
   font-family: var(--font-body), sans-serif;
   transition: background-color var(--transition-base), color var(--transition-base);
+ 
+
 }
 
 
