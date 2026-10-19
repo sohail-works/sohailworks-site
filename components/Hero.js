@@ -7,7 +7,8 @@ import { useState, useEffect, useRef } from "react";
 
 export default function Hero() {
   const cardRef = useRef(null);
-  const [qty, setQty] = useState(100);
+  const [qty, setQty] = useState(() => typeof window !== "undefined" && window.innerWidth < 768 ? 3 : 100);
+  const [isLight, setIsLight] = useState(false);
 
   const itemsInfo = [
     {
@@ -76,12 +77,23 @@ export default function Hero() {
   useEffect(() => {
     const update = () => {
       const newQty = window.innerWidth < 768 ? 30 : 100;
-      console.log("Width:", window.innerWidth, "Qty:", newQty);
       setQty(newQty);
     };
     update();
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
+  }, []);
+
+  useEffect(() => {
+    const checkTheme = () =>
+      setIsLight(document.documentElement.classList.contains("light"));
+    checkTheme();
+    const obs = new MutationObserver(checkTheme);
+    obs.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+    return () => obs.disconnect();
   }, []);
   return (
     <section id="home" className="relative overflow-hidden ">
@@ -92,20 +104,11 @@ export default function Hero() {
           height={40}
           className="text-[var(--border-strong)] opacity-60 [mask-image:radial-gradient(ellipse_at_center,white_30%,transparent_80%)]"
         />
-        {/* Dark mode */}
         <Particles
-          className="absolute inset-0 invisible dark:visible"
-          key={`dark-${qty}`}
+          className="absolute inset-0"
+          key={`${isLight ? "light" : "dark"}-${qty}`}
           quantity={qty}
-          color="#ffffff"
-          vy={-0.5}
-        />
-        {/* Light mode */}
-        <Particles
-          className="absolute inset-0 dark:invisible"
-          key={`light-${qty}`}
-          quantity={qty}
-          color="#0F172A"
+          color={isLight ? "#0F172A" : "#ffffff"}
           vy={-0.5}
         />
       </div>
@@ -113,7 +116,7 @@ export default function Hero() {
         {/* ── Left column ── */}
         <div className="space-y-6 ">
           {/* Badge */}
-          <div className="<div mx-auto flex w-fit items-center gap-2 md:mx-0 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-4 py-1.5">
+          <div className="mx-auto flex w-fit items-center gap-2 md:mx-0 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-4 py-1.5">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
@@ -185,7 +188,7 @@ export default function Hero() {
             ref={cardRef}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="w-full max-w-sm rounded-3xl border border-white/10 bg-white/[0.06] p-8 shadow-2xl backdrop-blur-xl transition-transform duration-150"
+            className="w-full max-w-sm rounded-3xl border border-white/10 bg-white/[0.06] p-8 shadow-2xl backdrop-blur-md transition-transform duration-150"
           >
             {/* ── Profile Image Card Div ── */}
             <div className="mx-auto h-28 w-28 rounded-full bg-gradient-brand p-[3px]">
