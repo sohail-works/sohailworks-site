@@ -63,6 +63,7 @@ export default function Services() {
   const [dims, setDims] = useState({ w: 0, h: 0 });
   const [progress, setProgress] = useState(0);
   const [activeNode, setActiveNode] = useState(-1);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const el = trackRef.current;
@@ -72,6 +73,13 @@ export default function Services() {
     const ro = new ResizeObserver(measure);
     ro.observe(el);
     return () => ro.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
   }, []);
 
   // ── Snake path — fixed percentages, 1:1 pixels ──
@@ -86,23 +94,27 @@ export default function Services() {
       ? `M ${x1} 0 L ${x1} ${yA - cp} C ${x1} ${yA} ${x2} ${yA} ${x2} ${yA + cp} L ${x2} ${yB - cp} C ${x2} ${yB} ${x1} ${yB} ${x1} ${yB + cp} L ${x1} ${h * 0.8}`
       : "";
 
-  // ── Draw on scroll + node activation ──
+  // ── Draw on scroll ──
   const { scrollYProgress } = useScroll({
     target: trackRef,
     offset: ["start 0.8", "end 0.55"],
   });
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
+    const c = Math.min(1, Math.max(0, v));
+    // Mobile par tez draw (1.4x)
+    const fast = isMobile ? Math.min(1, c * 1.4) : c;
+    setProgress(fast);
+
+    // Desktop path
     const p = pathRef.current;
     const track = trackRef.current;
     if (!p || !track) return;
     const len = p.getTotalLength();
-    const c = Math.min(1, Math.max(0, v));
     p.style.strokeDasharray = `${len}`;
     p.style.strokeDashoffset = `${len * (1 - c)}`;
-    setProgress(c);
 
-    // ── Draw head Y vs dots Y ──
+    // Node activation via draw head Y
     const headY = p.getPointAtLength(len * c).y;
     const trackTop = track.getBoundingClientRect().top;
     let on = -1;
@@ -131,11 +143,23 @@ export default function Services() {
 
         {/* ── Timeline track ── */}
         <div ref={trackRef} className="relative mt-16">
-          {/* Mobile: straight line */}
+          {/* Mobile: bg line */}
           <div
             aria-hidden="true"
-            className="absolute bottom-0 left-5 top-0 w-px bg-black/10 dark:bg-white/10 md:hidden"
+            className="absolute left-5 top-0 w-px bg-black/10 dark:bg-white/10 md:hidden"
+            style={{ bottom: "20%" }}
           />
+          {/* Mobile: orange line (draws on scroll) */}
+          <div
+            aria-hidden="true"
+            className="absolute top-0 md:hidden"
+            style={{ left: "19.25px", bottom: "20%" }}
+          >
+            <div
+              className="w-[2.5px] rounded-full bg-[#F97316]"
+              style={{ height: `${progress * 100}%` }}
+            />
+          </div>
 
           {/* Desktop: snake line */}
           {w > 0 && (
@@ -169,10 +193,6 @@ export default function Services() {
             return (
               <div
                 key={s.key}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.6 }}
                 className={`relative pb-24 md:pb-40 ${
                   flip ? "pl-14 md:pl-0 md:pr-20" : "pl-14 md:pl-20"
                 }`}
@@ -243,6 +263,5 @@ export default function Services() {
         </div>
       </div>
     </section>
-    
   );
 }
