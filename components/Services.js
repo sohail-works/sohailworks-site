@@ -59,7 +59,6 @@ const SERVICES = [
 export default function Services() {
   const trackRef = useRef(null);
   const pathRef = useRef(null);
-  const mobilePathRef = useRef(null);
   const nodeRefs = useRef([]);
   const [dims, setDims] = useState({ w: 0, h: 0 });
   const [progress, setProgress] = useState(0);
@@ -87,29 +86,23 @@ export default function Services() {
       ? `M ${x1} 0 L ${x1} ${yA - cp} C ${x1} ${yA} ${x2} ${yA} ${x2} ${yA + cp} L ${x2} ${yB - cp} C ${x2} ${yB} ${x1} ${yB} ${x1} ${yB + cp} L ${x1} ${h * 0.8}`
       : "";
 
-  // ── Draw on scroll ──
+  // ── Draw on scroll + node activation ──
   const { scrollYProgress } = useScroll({
     target: trackRef,
     offset: ["start 0.8", "end 0.55"],
   });
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    const c = Math.min(1, Math.max(0, v));
-    setProgress(c);
-
-    // Mobile orange line (independent)
-    const mp = mobilePathRef.current;
-    if (mp) mp.style.height = `${c * 100}%`;
-
-    // Desktop path
     const p = pathRef.current;
     const track = trackRef.current;
     if (!p || !track) return;
     const len = p.getTotalLength();
+    const c = Math.min(1, Math.max(0, v));
     p.style.strokeDasharray = `${len}`;
     p.style.strokeDashoffset = `${len * (1 - c)}`;
+    setProgress(c);
 
-    // Node activation via draw head Y
+    // ── Draw head Y vs dots Y ──
     const headY = p.getPointAtLength(len * c).y;
     const trackTop = track.getBoundingClientRect().top;
     let on = -1;
@@ -138,24 +131,11 @@ export default function Services() {
 
         {/* ── Timeline track ── */}
         <div ref={trackRef} className="relative mt-16">
-          {/* Mobile: bg line */}
+          {/* Mobile: straight line */}
           <div
             aria-hidden="true"
-            className="absolute left-5 top-0 w-px bg-black/10 dark:bg-white/10 md:hidden"
-            style={{ bottom: "20%" }}
+            className="absolute bottom-0 left-5 top-0 w-px bg-black/10 dark:bg-white/10 md:hidden"
           />
-          {/* Mobile: orange line (draws on scroll) */}
-          <div
-            aria-hidden="true"
-            className="absolute top-0 md:hidden"
-            style={{ left: "19.25px", bottom: "20%" }}
-          >
-            <div
-              ref={mobilePathRef}
-              className="w-[2.5px] rounded-full bg-[#F97316]"
-              style={{ height: "0%" }}
-            />
-          </div>
 
           {/* Desktop: snake line */}
           {w > 0 && (
@@ -189,6 +169,10 @@ export default function Services() {
             return (
               <div
                 key={s.key}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6 }}
                 className={`relative pb-24 md:pb-40 ${
                   flip ? "pl-14 md:pl-0 md:pr-20" : "pl-14 md:pl-20"
                 }`}
@@ -241,7 +225,7 @@ export default function Services() {
                   </div>
 
                   {/* Image placeholder */}
-                  <motion.div
+                  <div
                     initial={{ opacity: 0, scale: 0.96 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-80px" }}
@@ -251,7 +235,7 @@ export default function Services() {
                     }`}
                   >
                     {s.key}_image
-                  </motion.div>
+                  </div>
                 </div>
               </div>
             );
@@ -259,5 +243,6 @@ export default function Services() {
         </div>
       </div>
     </section>
+    
   );
 }
