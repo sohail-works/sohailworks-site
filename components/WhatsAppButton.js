@@ -1,7 +1,7 @@
 export default function WhatsappButton() {
   return (
     <a
-      href="https://wa.me/923485286200"
+      href="https://wa.me/447512281222?text=Hi%20Sohail!%20I%20found%20your%20portfolio%20website%20and%20I'd%20like%20to%20discuss%20a%20project%20with%20you"
       target="_blank"
       rel="noopener noreferrer"
       className="absolute fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg"

@@ -26,7 +26,7 @@ export default function Hero() {
     },
     {
       label: "LOCATION",
-      value: "Pakistan",
+      value: "United Kingdom",
     },
   ];
 
