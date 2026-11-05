@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
+import { WordPressVisual } from "./WordPressVisual";
 
 // ─── ─── Data ─── ───
 const SERVICES = [
@@ -102,8 +103,8 @@ export default function Services() {
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
     const c = Math.min(1, Math.max(0, v));
-    // Mobile par thori tez draw (1.1x)
-    const fast = isMobile ? Math.min(1, c * 1.1) : c;
+    // Mobile 1.1x (theek hai), Desktop 1.3x (tez)
+    const fast = isMobile ? Math.min(1, c * 1.1) : Math.min(1, c * 1.3);
     setProgress(fast);
 
     const track = trackRef.current;
@@ -129,10 +130,10 @@ export default function Services() {
     if (!p) return;
     const len = p.getTotalLength();
     p.style.strokeDasharray = `${len}`;
-    p.style.strokeDashoffset = `${len * (1 - c)}`;
+    p.style.strokeDashoffset = `${len * (1 - fast)}`;
 
     // Node activation via draw head Y
-    const headY = p.getPointAtLength(len * c).y;
+    const headY = p.getPointAtLength(len * fast).y;
     let on = -1;
     nodeRefs.current.forEach((node, i) => {
       if (!node) return;
@@ -233,7 +234,10 @@ export default function Services() {
                   <div className={flip ? "md:order-2" : ""}>
                     <p className="font-mono text-xs tracking-[0.18em]">
                       <span className="text-[var(--primary)]">{s.num}</span>
-                      <span className="text-[var(--text-muted)]"> / {s.eyebrow}</span>
+                      <span className="text-[var(--text-muted)]">
+                        {" "}
+                        / {s.eyebrow}
+                      </span>
                     </p>
                     <h3 className="mt-4 font-display text-3xl font-bold text-[var(--text-primary)]">
                       {s.title}
@@ -266,11 +270,19 @@ export default function Services() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-80px" }}
                     transition={{ duration: 0.6, delay: 0.15 }}
-                    className={`flex aspect-[4/3] items-center justify-center rounded-2xl border border-black/10 bg-black/[0.03] font-mono text-sm text-[var(--text-muted)] dark:border-white/10 dark:bg-white/[0.03] ${
-                      flip ? "md:order-1" : ""
-                    }`}
+                    className={flip ? "md:order-1" : ""}
                   >
-                    {s.key}_image
+                    {s.key === "wordpress" && <WordPressVisual />}
+                    {s.key === "ghl" && (
+                      <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-black/10 bg-black/[0.03] font-mono text-sm text-[var(--text-muted)] dark:border-white/10 dark:bg-white/[0.03]">
+                        ghl_image
+                      </div>
+                    )}
+                    {s.key === "frontend" && (
+                      <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-black/10 bg-black/[0.03] font-mono text-sm text-[var(--text-muted)] dark:border-white/10 dark:bg-white/[0.03]">
+                        frontend_image
+                      </div>
+                    )}
                   </motion.div>
                 </div>
               </div>

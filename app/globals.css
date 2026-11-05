@@ -243,3 +243,46 @@ html, a, button {
 html {
   scroll-padding-top: 70px;
 }
+
+
+/* ─── ─── Services visuals (WordPressVisual) — globals.css me add karo ─── ─── */
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal {
+  animation: reveal 0.7s ease both;
+}
+
+.wp-select {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1.5px solid var(--primary);
+  border-radius: 6px;
+  animation: wp-select 5s ease-in-out infinite;
+}
+
+@keyframes wp-select {
+  0%,
+  45% {
+    clip-path: inset(62px 42% 98px 16px);
+    opacity: 1;
+  }
+  50%,
+  95% {
+    clip-path: inset(calc(100% - 78px) 16px 14px 16px);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(62px 42% 98px 16px);
+    opacity: 1;
+  }
+}
