@@ -102,21 +102,37 @@ export default function Services() {
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
     const c = Math.min(1, Math.max(0, v));
-    // Mobile par tez draw (1.4x)
-    const fast = isMobile ? Math.min(1, c * 1.4) : c;
+    // Mobile par thori tez draw (1.1x)
+    const fast = isMobile ? Math.min(1, c * 1.1) : c;
     setProgress(fast);
 
-    // Desktop path
-    const p = pathRef.current;
     const track = trackRef.current;
-    if (!p || !track) return;
+    if (!track) return;
+    const trackTop = track.getBoundingClientRect().top;
+
+    // ── Mobile: activation from straight-line head Y (desktop path se independent) ──
+    if (isMobile) {
+      const headY = fast * 0.8 * h;
+      let on = -1;
+      nodeRefs.current.forEach((node, i) => {
+        if (!node) return;
+        const r = node.getBoundingClientRect();
+        const nodeY = r.top + r.height / 2 - trackTop;
+        if (headY >= nodeY - 5) on = i;
+      });
+      setActiveNode(on);
+      return;
+    }
+
+    // ── Desktop path ──
+    const p = pathRef.current;
+    if (!p) return;
     const len = p.getTotalLength();
     p.style.strokeDasharray = `${len}`;
     p.style.strokeDashoffset = `${len * (1 - c)}`;
 
     // Node activation via draw head Y
     const headY = p.getPointAtLength(len * c).y;
-    const trackTop = track.getBoundingClientRect().top;
     let on = -1;
     nodeRefs.current.forEach((node, i) => {
       if (!node) return;
@@ -229,7 +245,7 @@ export default function Services() {
                       {s.capabilities.map((c) => (
                         <li
                           key={c}
-                          className="flex items-center gap-3 text-[var(--text-secondary)]"
+                          className="flex items-center gap-3 text-sm text-[var(--text-secondary)] md:text-base"
                         >
                           <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--primary)]" />
                           {c}
@@ -245,7 +261,7 @@ export default function Services() {
                   </div>
 
                   {/* Image placeholder */}
-                  <div
+                  <motion.div
                     initial={{ opacity: 0, scale: 0.96 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: "-80px" }}
@@ -255,7 +271,7 @@ export default function Services() {
                     }`}
                   >
                     {s.key}_image
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             );
