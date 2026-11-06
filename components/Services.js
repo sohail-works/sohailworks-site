@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { WordPressVisual } from "./WordPressVisual";
+import { GHLWorkflowVisual } from "./GHLWorkflowVisual";
+import { FrontendCodeVisual } from "./FrontendCodeVisual";
 
 // ─── ─── Data ─── ───
 const SERVICES = [
@@ -103,7 +105,7 @@ export default function Services() {
 
   useMotionValueEvent(scrollYProgress, "change", (v) => {
     const c = Math.min(1, Math.max(0, v));
-    // Mobile 1.1x (theek hai), Desktop 1.3x (tez)
+    // Mobile 1.1x, Desktop 1.3x
     const fast = isMobile ? Math.min(1, c * 1.1) : Math.min(1, c * 1.3);
     setProgress(fast);
 
@@ -210,7 +212,8 @@ export default function Services() {
             return (
               <div
                 key={s.key}
-                className={`relative pb-24 md:pb-40 ${
+                data-state={i < activeNode ? "done" : i === activeNode ? "active" : undefined}
+                className={`svc-item relative pb-24 md:pb-40 ${
                   flip ? "pl-14 md:pl-0 md:pr-20" : "pl-14 md:pl-20"
                 }`}
               >
@@ -234,10 +237,7 @@ export default function Services() {
                   <div className={flip ? "md:order-2" : ""}>
                     <p className="font-mono text-xs tracking-[0.18em]">
                       <span className="text-[var(--primary)]">{s.num}</span>
-                      <span className="text-[var(--text-muted)]">
-                        {" "}
-                        / {s.eyebrow}
-                      </span>
+                      <span className="text-[var(--text-muted)]"> / {s.eyebrow}</span>
                     </p>
                     <h3 className="mt-4 font-display text-3xl font-bold text-[var(--text-primary)]">
                       {s.title}
@@ -258,13 +258,13 @@ export default function Services() {
                     </ul>
                     <a
                       href="#contact"
-                      className="mt-8 inline-flex items-center gap-2 rounded-full bg-[var(--primary)] px-6 py-3 font-medium text-white transition hover:bg-[var(--primary-hover)]"
+                      className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#6E73BE] px-6 py-3 font-medium text-white transition hover:opacity-90"
                     >
                       {s.cta} <span aria-hidden="true">→</span>
                     </a>
                   </div>
 
-                  {/* Image placeholder */}
+                  {/* Visual */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0.96 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -273,16 +273,8 @@ export default function Services() {
                     className={flip ? "md:order-1" : ""}
                   >
                     {s.key === "wordpress" && <WordPressVisual />}
-                    {s.key === "ghl" && (
-                      <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-black/10 bg-black/[0.03] font-mono text-sm text-[var(--text-muted)] dark:border-white/10 dark:bg-white/[0.03]">
-                        ghl_image
-                      </div>
-                    )}
-                    {s.key === "frontend" && (
-                      <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-black/10 bg-black/[0.03] font-mono text-sm text-[var(--text-muted)] dark:border-white/10 dark:bg-white/[0.03]">
-                        frontend_image
-                      </div>
-                    )}
+                    {s.key === "ghl" && <GHLWorkflowVisual />}
+                    {s.key === "frontend" && <FrontendCodeVisual />}
                   </motion.div>
                 </div>
               </div>

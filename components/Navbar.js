@@ -29,6 +29,26 @@ export default function Navbar() {
     };
   }, [open]);
 
+  // ─── Scroll spy: section ke hisab se active link ───
+  useEffect(() => {
+    const ids = ["home", "services", "portfolio", "about", "contact"];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(`/#${entry.target.id}`);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" },
+    );
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
+
   function toggleMode() {
     setDarkMode(!darkMode);
     document.documentElement.classList.toggle("light");
@@ -36,12 +56,19 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`sticky top-0 z-50 border-b border-[var(--border-subtle)] backdrop-blur-md ${
+      <header
+        className={`sticky top-0 z-50 border-b border-[var(--border-subtle)] backdrop-blur-md ${
           open ? "bg-[var(--bg-base)]" : "bg-[var(--bg-base)]/70"
-        }`}>
+        }`}
+      >
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center text-2xl">
-            <Image src="/images/logo.svg" alt="Sohail — logo" width={35} height={35} />
+            <Image
+              src="/images/logo.svg"
+              alt="Sohail — logo"
+              width={35}
+              height={35}
+            />
             <span className="bg-[image:var(--gradient-brand)] bg-clip-text font-display font-bold text-2xl text-transparent">
               Sohail<span className="text-[var(--primary)]">.</span>
             </span>
@@ -119,7 +146,9 @@ export default function Navbar() {
 
         <div
           className={`absolute left-0 right-0 top-full z-50 origin-top-right border-b border-[var(--border-subtle)] bg-[var(--bg-base)] transition-all duration-300 md:hidden ${
-            open ? "scale-100 opacity-100" : "pointer-events-none scale-0 opacity-0"
+            open
+              ? "scale-100 opacity-100"
+              : "pointer-events-none scale-0 opacity-0"
           }`}
         >
           <ul className="space-y-1 px-6 py-4">
