@@ -89,12 +89,12 @@ export default function Services() {
   const { w, h } = dims;
   const x1 = w * 0.02;
   const x2 = w * 0.98;
-  const yA = h * 0.29;
-  const yB = h * 0.62;
+  const yA = h * 0.31;
+  const yB = h * 0.66;
   const cp = 50;
   const snakePath =
     w > 0
-      ? `M ${x1} 0 L ${x1} ${yA - cp} C ${x1} ${yA} ${x2} ${yA} ${x2} ${yA + cp} L ${x2} ${yB - cp} C ${x2} ${yB} ${x1} ${yB} ${x1} ${yB + cp} L ${x1} ${h * 0.8}`
+      ? `M ${x1} 0 L ${x1} ${yA - cp} C ${x1} ${yA} ${x2} ${yA} ${x2} ${yA + cp} L ${x2} ${yB - cp} C ${x2} ${yB} ${x1} ${yB} ${x1} ${yB + cp} L ${x1} ${h * 0.85}`
       : "";
 
   // ── Draw on scroll ──
