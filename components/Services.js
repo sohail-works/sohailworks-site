@@ -151,7 +151,7 @@ export default function Services() {
       <div className="mx-auto max-w-6xl px-6">
         {/* ── Header ── */}
         <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
-          02 / SERVICES
+          WHAT I DO / SERVICES
         </p>
         <h2 className="mt-4 font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
           Services
@@ -212,10 +212,16 @@ export default function Services() {
             return (
               <div
                 key={s.key}
-                data-state={i < activeNode ? "done" : i === activeNode ? "active" : undefined}
-                className={`svc-item relative pb-24 md:pb-40 ${
-                  flip ? "pl-14 md:pl-0 md:pr-20" : "pl-14 md:pl-20"
-                }`}
+                data-state={
+                  i < activeNode
+                    ? "done"
+                    : i === activeNode
+                      ? "active"
+                      : undefined
+                }
+                className={`svc-item relative ${
+                  i === SERVICES.length - 1 ? "pb-0" : "pb-24 md:pb-40"
+                } ${flip ? "pl-14 md:pl-0 md:pr-20" : "pl-14 md:pl-20"}`}
               >
                 {/* Node — dot on the line */}
                 <div
@@ -237,7 +243,10 @@ export default function Services() {
                   <div className={flip ? "md:order-2" : ""}>
                     <p className="font-mono text-xs tracking-[0.18em]">
                       <span className="text-[var(--primary)]">{s.num}</span>
-                      <span className="text-[var(--text-muted)]"> / {s.eyebrow}</span>
+                      <span className="text-[var(--text-muted)]">
+                        {" "}
+                        / {s.eyebrow}
+                      </span>
                     </p>
                     <h3 className="mt-4 font-display text-3xl font-bold text-[var(--text-primary)]">
                       {s.title}

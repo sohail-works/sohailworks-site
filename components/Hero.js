@@ -140,10 +140,10 @@ export default function Hero() {
             I help local businesses capture leads and close deals faster with{" "}
             <span className="font-medium text-[var(--text-primary)]">
               WordPress websites
-            </span>{" "}
+            </span>
             ,{" "}
             <span className="font-medium text-[var(--text-primary)]">
-              GoHighLevel funnels
+            GoHighLevel funnels
             </span>{" "}
             and{" "}
             <span className="font-medium text-[var(--text-primary)]">
