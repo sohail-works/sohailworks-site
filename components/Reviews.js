@@ -176,7 +176,7 @@ export default function Reviews() {
           REVIEWS / CLIENT FEEDBACK
         </p>
         <h2 className="mt-4 font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
-          What Clients Say
+         What <span className="text-[var(--primary)]">Clients</span> Say
         </h2>
 
         {/* ── Feedback row */}

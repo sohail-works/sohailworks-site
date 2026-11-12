@@ -10,8 +10,8 @@ export default function Navbar() {
     { label: "Home", href: "/#home" },
     { label: "Services", href: "/#services" },
     { label: "Portfolio", href: "/#portfolio" },
-    {label: "Reviews", href: "/#reviews"},
     { label: "About", href: "/#about" },
+    {label: "Reviews", href: "/#reviews"},
     { label: "Contact", href: "/#contact" },
   ];
 
@@ -30,24 +30,48 @@ export default function Navbar() {
     };
   }, [open]);
 
-  // ─── Scroll spy: section ke hisab se active link ───
+  // ─── Scroll spy:
   useEffect(() => {
-    const ids = ["home", "services", "portfolio", "about", "contact"];
+    const ids = ["home", "services", "portfolio", "about", "reviews", "contact"];
+    const observed = new Set();
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(`/#${entry.target.id}`);
-          }
+          if (entry.isIntersecting) setActive(`/#${entry.target.id}`);
         });
       },
-      { rootMargin: "-40% 0px -55% 0px" },
+      { rootMargin: "-40% 0px -55% 0px" }
     );
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
+
+    const observeSections = () => {
+      // Drop nodes that were removed (HMR / dynamic reload) so they can be re-observed
+      observed.forEach((el) => {
+        if (!document.contains(el)) {
+          observer.unobserve(el);
+          observed.delete(el);
+        }
+      });
+      ids.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el && !observed.has(el)) {
+          observer.observe(el);
+          observed.add(el);
+        }
+      });
+    };
+
+    // Do NOT disconnect the MutationObserver once all sections are found —
+    // a section that remounts (dev HMR, dynamic import reload) is a new DOM
+    // node, and it only gets observed if the observer is still watching
+    const mo = new MutationObserver(observeSections);
+    observeSections();
+    mo.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      mo.disconnect();
+    };
   }, []);
 
   function toggleMode() {

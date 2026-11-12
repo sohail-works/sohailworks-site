@@ -37,6 +37,7 @@ const FILTERS = [
 // ─── ─── Main component ─── ───
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [tapped, setTapped] = useState(null); // mobile: tap toggles the scroll (no hover on touch)
 
   const filtered =
     activeFilter === "all"
@@ -83,7 +84,8 @@ export default function Portfolio() {
           {filtered.map((p, i) => (
             <div
               key={p.image}
-              className="group relative rounded-xl bg-[var(--border-subtle)] p-[3px] transition-all duration-300 hover:bg-[image:var(--gradient-brand)] hover:shadow-[0_0_30px_rgba(249,115,22,0.25)]"
+              onClick={() => setTapped(tapped === p.image ? null : p.image)}
+              className="group relative cursor-pointer rounded-xl bg-[var(--border-subtle)] p-[3px] transition-all duration-300 hover:bg-[image:var(--gradient-brand)] hover:shadow-[0_0_30px_rgba(249,115,22,0.25)]"
             >
               <div className="relative aspect-[2/3] overflow-hidden rounded-[9px]">
                 <Image
@@ -92,18 +94,28 @@ export default function Portfolio() {
                   fill
                   loading="lazy"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover object-top transition-[object-position] duration-[5000ms] ease-in-out group-hover:object-bottom"
+                  className={`object-cover transition-[object-position] duration-[5000ms] ease-in-out group-hover:object-bottom ${
+                    tapped === p.image ? "object-bottom" : "object-top"
+                  }`}
                 />
 
                 {/* Mouse icon — scroll hint */}
-                <div className="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 group-hover:opacity-0">
+                <div
+                  className={`pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 group-hover:opacity-0 ${
+                    tapped === p.image ? "opacity-0" : ""
+                  }`}
+                >
                   <div className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-white/90 bg-black/40 pt-1.5 backdrop-blur-sm">
                     <div className="h-2 w-1 animate-bounce rounded-full bg-white" />
                   </div>
                 </div>
 
                 {/* Live Preview badge */}
-                <span className="absolute left-3 top-3 z-10 rounded-md bg-black/70 px-2.5 py-1 font-mono text-[10px] tracking-[0.15em] text-white opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+                <span
+                  className={`absolute left-3 top-3 z-10 rounded-md bg-black/70 px-2.5 py-1 font-mono text-[10px] tracking-[0.15em] text-white backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100 ${
+                    tapped === p.image ? "opacity-100" : "opacity-0"
+                  }`}
+                >
                   LIVE PREVIEW
                 </span>
               </div>
