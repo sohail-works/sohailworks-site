@@ -162,9 +162,6 @@ export default function About() {
 
             {/* Seller badges */}
             <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
-              <span className="rounded-full bg-[#22C55E] px-3 py-1 text-xs font-semibold text-white">
-                Level 2 Seller
-              </span>
               <span className="rounded-full bg-[var(--primary)] px-3 py-1 text-xs font-semibold text-white">
                 Top Rated
               </span>
@@ -219,7 +216,7 @@ export default function About() {
             </a>
           </div>
 
-          {/* ── About copy ── */}
+          {/* ── About ── */}
           <div>
             <h2 className="font-display text-4xl font-bold leading-tight text-[var(--text-primary)] md:text-5xl">
               Hi, I&apos;m{" "}
@@ -229,14 +226,21 @@ export default function About() {
             <p className="mt-5 leading-relaxed text-[var(--text-secondary)]">
               I build fast, reliable websites and funnels that turn visitors
               into customers. With 5+ years of experience and 100+ orders
-              completed, I focus on clean code, clear communication, and
-              results you can measure.
+              completed, I focus on clean code, clear communication, and results
+              you can measure.
             </p>
             <p className="mt-4 leading-relaxed text-[var(--text-secondary)]">
               Whether it&apos;s a WordPress site built for SEO, a GoHighLevel
               funnel that automates your sales process, or a React/Next.js app
               for a modern web experience &mdash; I deliver on time, with no
               headaches.
+            </p>
+            <p className="mt-4 leading-relaxed text-[var(--text-secondary)]">
+              Whether it&apos;s a WordPress site built for SEO, a GoHighLevel
+              funnel that automates your sales process, or a React/Next.js app
+              for a modern web experience &mdash; I deliver on time, with no
+              headaches. I work with roofers, HVAC, plumbers, med spas and other
+              local businesses in the US &amp; UK.
             </p>
 
             {/* Key points */}

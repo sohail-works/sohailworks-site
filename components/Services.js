@@ -9,24 +9,8 @@ import { FrontendCodeVisual } from "./FrontendCodeVisual";
 // ─── ─── Data ─── ───
 const SERVICES = [
   {
-    key: "wordpress",
-    num: "01",
-    eyebrow: "CUSTOM WEBSITES / WORDPRESS",
-    title: "WordPress Development",
-    description:
-      "Flexible, scalable websites designed around your business, your content, and your customers.",
-    capabilities: [
-      "Custom WordPress Websites",
-      "Elementor & Elementor Pro",
-      "WooCommerce Development",
-      "Custom Theme & UI Implementation",
-      "Performance and Responsive Optimization",
-    ],
-    cta: "Explore WordPress",
-  },
-  {
     key: "ghl",
-    num: "02",
+    num: "01",
     eyebrow: "FUNNELS & AUTOMATION / GOHIGHLEVEL",
     title: "GoHighLevel Solutions",
     description:
@@ -39,6 +23,22 @@ const SERVICES = [
       "Lead Nurturing and Follow-Up Systems",
     ],
     cta: "Explore GHL",
+  },
+   {
+    key: "wordpress",
+    num: "02",
+    eyebrow: "CUSTOM WEBSITES / WORDPRESS",
+    title: "WordPress Development",
+    description:
+      "Flexible, scalable websites designed around your business, your content, and your customers.",
+    capabilities: [
+      "Custom WordPress Websites",
+      "Elementor & Elementor Pro",
+      "WooCommerce Development",
+      "Custom Theme & UI Implementation",
+      "Performance and Responsive Optimization",
+    ],
+    cta: "Explore WordPress",
   },
   {
     key: "frontend",

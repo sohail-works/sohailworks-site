@@ -32,6 +32,16 @@ const FAQS = [
     q: "Do you build AI automations?",
     a: "Yes. I set up AI chatbots that answer customer questions, automations that follow up with leads, and workflows that save hours of manual work — all connected to your website or GoHighLevel.",
   },
+
+  {
+    q: "How much does a GoHighLevel setup cost?",
+    a: "It depends on the scope — a basic funnel and CRM setup costs less than a full automation build. Share your requirements on a free call and I'll give you a fixed quote before we start, no hourly billing.",
+  },
+  {
+    q: "Do you work with roofers, HVAC, plumbers and other local businesses?",
+    a: "Yes — I mainly work with local service businesses in the US & UK: roofers, HVAC, plumbers, med spas, cleaning, builders and electricians. If your business runs on leads, bookings and follow-ups, GoHighLevel fits.",
+  },
+
   {
     q: "Can you build a custom app with React / Next.js?",
     a: "Yes. For anything beyond a standard website — dashboards, booking systems, custom tools — I build fast, modern apps with React and Next.js, tailored exactly to how your business works.",
@@ -46,7 +56,7 @@ const FAQS = [
   },
   {
     q: "Do you provide support after the website goes live?",
-    a: "Yes — I stay available after launch to fix any issues and help with small updates. I also offer monthly maintenance plans for updates, backups, and ongoing changes.",
+    a: "Yes — I stay available after launch to fix any issues and help with small updates and provide free support for 2 monnths. I also offer monthly maintenance plans for updates, backups, and ongoing changes.",
   },
 ];
 
@@ -119,8 +129,8 @@ export default function Faqs() {
   // First question open by default; one open at a time.
   const [openIndex, setOpenIndex] = useState(0);
 
-  const left = FAQS.slice(0, 5);
-  const right = FAQS.slice(5);
+  const left = FAQS.slice(0, 6);
+  const right = FAQS.slice(6);
 
   const renderColumn = (items, offset) => (
     <div className="contents lg:block lg:space-y-4 lg:rounded-2xl lg:border lg:border-[var(--border-subtle)] lg:bg-[var(--bg-elevated)] lg:p-6">
@@ -157,7 +167,7 @@ export default function Faqs() {
         {/* ── Two columns, 5 questions each ── */}
         <div className="mt-12 grid gap-4 lg:grid-cols-2 lg:gap-6">
           {renderColumn(left, 0)}
-          {renderColumn(right, 5)}
+          {renderColumn(right, 6)}
         </div>
       </div>
     </section>

@@ -56,7 +56,7 @@ export default function Hero() {
       value: "4.8",
       suffix: "/5.0",
       label: "Client Rating",
-      sub: "Verified 5-Star Reviews",
+      sub: "Verified Client Reviews",
     },
   ];
 

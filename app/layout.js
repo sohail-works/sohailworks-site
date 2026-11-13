@@ -26,13 +26,43 @@ const jetbrains = localFont({
 });
 
 export const metadata = {
-  title: "SohailWorks | GoHighLevel Expert & WordPress Developer",
+  metadataBase: new URL("https://sohailworks.com"),
+  title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
   description: "GoHighLevel expert for US & UK small businesses — GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
+  openGraph: {
+    title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
+    description: "GoHighLevel expert for US & UK small businesses — GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
+    url: "https://sohailworks.com",
+    siteName: "SohailWorks",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
+    description: "GoHighLevel expert for US & UK small businesses — GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Sohail Ashraf",
+  alternateName: "SohailWorks",
+  jobTitle: "GoHighLevel Expert",
+  knowsAbout: ["GoHighLevel", "WordPress", "React", "Next.js"],
+  areaServed: ["US", "GB"],
+  url: "https://sohailworks.com",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en"  className= {` scroll-smooth ${spaceGrotesk.variable} ${jakarta.variable} ${jetbrains.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>
       <Navbar />
       <CustomCursor />
