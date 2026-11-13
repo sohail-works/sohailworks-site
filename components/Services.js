@@ -14,7 +14,7 @@ const SERVICES = [
     eyebrow: "FUNNELS & AUTOMATION / GOHIGHLEVEL",
     title: "GoHighLevel Solutions",
     description:
-      "Connected systems that turn leads into conversations, streamline follow-ups, and help businesses manage their customer journeys.",
+      "As a GoHighLevel expert, I build connected GHL funnels, CRM & automation systems that turn leads into conversations, streamline follow-ups, and help businesses manage their customer journeys.",
     capabilities: [
       "CRM & Pipeline Setup",
       "Landing Pages and Funnels",

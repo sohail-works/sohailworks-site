@@ -232,13 +232,7 @@ export default function About() {
             <p className="mt-4 leading-relaxed text-[var(--text-secondary)]">
               Whether it&apos;s a WordPress site built for SEO, a GoHighLevel
               funnel that automates your sales process, or a React/Next.js app
-              for a modern web experience &mdash; I deliver on time, with no
-              headaches.
-            </p>
-            <p className="mt-4 leading-relaxed text-[var(--text-secondary)]">
-              Whether it&apos;s a WordPress site built for SEO, a GoHighLevel
-              funnel that automates your sales process, or a React/Next.js app
-              for a modern web experience &mdash; I deliver on time, with no
+              for a modern web experience, I deliver on time, with no
               headaches. I work with roofers, HVAC, plumbers, med spas and other
               local businesses in the US &amp; UK.
             </p>
