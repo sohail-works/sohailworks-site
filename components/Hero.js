@@ -7,7 +7,9 @@ import { useState, useEffect, useRef } from "react";
 
 export default function Hero() {
   const cardRef = useRef(null);
-  const [qty, setQty] = useState(() => typeof window !== "undefined" && window.innerWidth < 768 ? 30 : 100);
+  const [qty, setQty] = useState(() =>
+    typeof window !== "undefined" && window.innerWidth < 768 ? 30 : 100,
+  );
   const [isLight, setIsLight] = useState(false);
 
   const itemsInfo = [
@@ -143,18 +145,18 @@ export default function Hero() {
             </span>
             ,{" "}
             <span className="font-medium text-[var(--text-primary)]">
-            GoHighLevel funnels
+              GoHighLevel funnels
             </span>{" "}
             and{" "}
             <span className="font-medium text-[var(--text-primary)]">
               automations
-            </span>{" "}
+            </span>
             , and{" "}
             <span className="font-medium text-[var(--text-primary)]">
               React/Next.js
             </span>{" "}
             apps. With 5 years of experience and $15k+ earned as a Top Rated on
-            Fiverr & upwork with proven track record, I bring both the strategy
+            Fiverr & Upwork with proven track record, I bring both the strategy
             and the hands-on build.
           </p>
 

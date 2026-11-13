@@ -26,8 +26,8 @@ const jetbrains = localFont({
 });
 
 export const metadata = {
-  title: "Sohail — WordPress, GoHighLevel & React Developer",
-  description: "I build fast, high-converting websites with WordPress, GoHighLevel & React. What you can imagine, I can build it for you — let's work together.",
+  title: "SohailWorks | GoHighLevel Expert & WordPress Developer",
+  description: "GoHighLevel expert for US & UK small businesses — GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
 };
 
 export default function RootLayout({ children }) {
