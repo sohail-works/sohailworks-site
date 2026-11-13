@@ -29,6 +29,9 @@ export const metadata = {
   metadataBase: new URL("https://sohailworks.com"),
   title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
   description: "GoHighLevel expert for US & UK small businesses — GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
+    alternates: {
+    canonical: "https://sohailworks.com",
+  },
   openGraph: {
     title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
     description: "GoHighLevel expert for US & UK small businesses — GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
