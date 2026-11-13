@@ -123,7 +123,7 @@ export default function Faqs() {
   const right = FAQS.slice(5);
 
   const renderColumn = (items, offset) => (
-    <div className="space-y-4 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-4 md:p-6">
+    <div className="contents lg:block lg:space-y-4 lg:rounded-2xl lg:border lg:border-[var(--border-subtle)] lg:bg-[var(--bg-elevated)] lg:p-6">
       {items.map((faq, i) => {
         const index = offset + i;
         return (
@@ -155,7 +155,7 @@ export default function Faqs() {
         </div>
 
         {/* ── Two columns, 5 questions each ── */}
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+        <div className="mt-12 grid gap-4 lg:grid-cols-2 lg:gap-6">
           {renderColumn(left, 0)}
           {renderColumn(right, 5)}
         </div>

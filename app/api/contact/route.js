@@ -1,17 +1,19 @@
 // ─── ─── Contact form API route — sends the inquiry email directly ─── ───
-// Place this file at: app/api/contact/route.js
-// Needs `nodemailer` — install it first: npm install nodemailer
-//
-// Env vars (never put passwords in code):
-//   SMTP_USER — your sending mailbox, e.g. sohail@sohailworks.com
-//   SMTP_PASS — that mailbox's password
-// Locally: put them in .env.local (project root).
-// Live: add them in the Hostinger dashboard → your web app → Environment Variables,
-// then redeploy so the app picks them up.
-
 import nodemailer from "nodemailer";
 
 const TO = ["sohail@sohailworks.com", "sohaildev125@gmail.com"];
+
+// Pooled connection — reused across submissions.
+const transporter = nodemailer.createTransport({
+  host: "smtp.hostinger.com",
+  port: 465,
+  secure: true,
+  pool: true,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
 
 export async function POST(request) {
   console.log("Contact form submission received");
@@ -33,16 +35,6 @@ export async function POST(request) {
         { status: 400 }
       );
     }
-
-    const transporter = nodemailer.createTransport({
-      host: "smtp.hostinger.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
 
     const lines = [
       `Name: ${name}`,

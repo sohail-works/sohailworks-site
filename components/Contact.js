@@ -212,7 +212,7 @@ export default function Contact() {
   )}`;
 
   return (
-    <section id="contact" className="mx-auto w-full max-w-7xl px-4 pb-24 pt-12 sm:px-6 lg:px-8">
+    <section id="contact" className="mx-auto w-full max-w-7xl px-4 pb-16 pt-12 sm:px-6 lg:px-8">
       <style>{DROPDOWN_SCROLLBAR_CSS}</style>
 
       {/* ── Section header ── */}
@@ -248,7 +248,7 @@ export default function Contact() {
                 Message sent!
               </h4>
               <p className="mt-2 max-w-sm text-sm leading-relaxed text-[var(--text-secondary)]">
-                Thanks for reaching out — I'll get back to you within 24 hours.
+                Thanks for reaching out — I'll get back to you within 2 hours.
               </p>
               <a
                 href={whatsappDetailsUrl}
