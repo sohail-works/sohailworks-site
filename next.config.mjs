@@ -7,8 +7,8 @@ const nextConfig = {
         headers: [
           {
             key: "Link",
-            value:
-              '<https://sohailworks.com/llms.txt>; rel="alternate"; type="text/plain"',
+            value: '<https://www.sohailworks.com/llms.txt>; rel="alternate"; type="text/plain"',
+
           },
         ],
       },

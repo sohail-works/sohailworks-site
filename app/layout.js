@@ -26,16 +26,16 @@ const jetbrains = localFont({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://sohailworks.com"),
+  metadataBase: new URL("https://www.sohailworks.com"),
   title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
   description: "GoHighLevel expert for US & UK small businesses — GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
     alternates: {
-    canonical: "https://sohailworks.com",
+    canonical: "https://www.sohailworks.com/",
   },
   openGraph: {
     title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
     description: "GoHighLevel expert for US & UK small businesses — GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
-    url: "https://sohailworks.com",
+    url: "https://www.sohailworks.com",
     siteName: "SohailWorks",
     type: "website",
   },
@@ -55,14 +55,14 @@ const jsonLd = [
     jobTitle: "GoHighLevel Expert",
     knowsAbout: ["GoHighLevel", "WordPress", "React", "Next.js"],
     areaServed: ["US", "GB"],
-    url: "https://sohailworks.com",
+    url: "https://www.sohailworks.com",
   },
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "SohailWorks",
-    url: "https://sohailworks.com",
-    logo: "https://sohailworks.com/icon.png",
+    url: "https://www.sohailworks.com",
+    logo: "https://www.sohailworks.com/icon.png",
     description:
       "GoHighLevel expert for US & UK small businesses — GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps.",
     email: "sohail@sohailworks.com",

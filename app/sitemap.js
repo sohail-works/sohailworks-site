@@ -1,7 +1,7 @@
 export default function sitemap() {
   return [
     {
-      url: "https://sohailworks.com",
+      url: "https://www.sohailworks.com",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
