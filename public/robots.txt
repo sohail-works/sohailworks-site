@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Content-Signal: search=yes, ai-train=no
+
+Sitemap: https://sohailworks.com/sitemap.xml

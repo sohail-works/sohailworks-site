@@ -56,7 +56,7 @@ const FAQS = [
   },
   {
     q: "Do you provide support after the website goes live?",
-    a: "Yes — I stay available after launch to fix any issues and help with small updates and provide free support for 2 monnths. I also offer monthly maintenance plans for updates, backups, and ongoing changes.",
+    a: "Yes — I stay available after launch to fix any issues and help with small updates and provide free support for 2 months. I also offer monthly maintenance plans for updates, backups, and ongoing changes.",
   },
 ];
 
