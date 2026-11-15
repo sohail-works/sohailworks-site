@@ -40,6 +40,7 @@ const SERVICES = [
       "Performance and Responsive Optimization",
     ],
     cta: "Explore WordPress",
+    href: "/wordpress-development-services/"
   },
   {
     key: "frontend",
@@ -56,6 +57,8 @@ const SERVICES = [
       "API Integration and Interactive Experiences",
     ],
     cta: "Explore Frontend",
+    href: "/web-app-development-services/",
+
   },
 ];
 
