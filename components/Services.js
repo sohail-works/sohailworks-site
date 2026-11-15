@@ -23,8 +23,9 @@ const SERVICES = [
       "Lead Nurturing and Follow-Up Systems",
     ],
     cta: "Explore GHL",
+    href: "/gohighlevel-expert/",
   },
-   {
+  {
     key: "wordpress",
     num: "02",
     eyebrow: "CUSTOM WEBSITES / WORDPRESS",
@@ -266,7 +267,7 @@ export default function Services() {
                       ))}
                     </ul>
                     <a
-                      href="#contact"
+                      href={s.href || "#contact"}
                       className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#6E73BE] px-6 py-3 font-medium text-white transition hover:opacity-90"
                     >
                       {s.cta} <span aria-hidden="true">→</span>

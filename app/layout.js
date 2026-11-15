@@ -195,7 +195,7 @@ const jsonLd = [
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en"  className= {` scroll-smooth ${spaceGrotesk.variable} ${jakarta.variable} ${jetbrains.variable}`}>
+<html lang="en" data-scroll-behavior="smooth" className={` scroll-smooth ${spaceGrotesk.variable} ${jakarta.variable} ${jetbrains.variable}`}>
       <head>
         <script
           type="application/ld+json"
