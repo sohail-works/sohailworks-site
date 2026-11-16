@@ -118,7 +118,7 @@ export default function About() {
             Get to know <span className="text-[var(--primary)]">me.</span>
           </h2>
           <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
-            Who I am, what I do, and how I work — all in one place.
+            Who I am, what I do, and how I work, all in one place.
           </p>
         </div>
 
@@ -173,7 +173,7 @@ export default function About() {
               4.8/5.0 (46 reviews)
             </p>
             <p className="mt-2 text-sm text-[var(--text-muted)]">
-              Member since 2021 &middot; English &mdash; Fluent
+              Member since 2021 &middot; Fluent English
             </p>
 
             <hr className="my-6 border-[var(--border-subtle)]" />

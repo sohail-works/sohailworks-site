@@ -28,13 +28,13 @@ const jetbrains = localFont({
 export const metadata = {
   metadataBase: new URL("https://www.sohailworks.com"),
   title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
-  description: "GoHighLevel expert for US & UK small businesses — GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
+  description: "GoHighLevel expert for US & UK small businesses: GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
     alternates: {
     canonical: "https://www.sohailworks.com/",
   },
   openGraph: {
     title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
-    description: "GoHighLevel expert for US & UK small businesses — GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
+    description: "GoHighLevel expert for US & UK small businesses: GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
     url: "https://www.sohailworks.com",
     siteName: "SohailWorks",
     type: "website",
@@ -42,7 +42,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
-    description: "GoHighLevel expert for US & UK small businesses — GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
+    description: "GoHighLevel expert for US & UK small businesses: GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
   },
 };
 
@@ -64,7 +64,7 @@ const jsonLd = [
     url: "https://www.sohailworks.com",
     logo: "https://www.sohailworks.com/icon.png",
     description:
-      "GoHighLevel expert for US & UK small businesses — GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps.",
+      "GoHighLevel expert for US & UK small businesses: GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps.",
     email: "sohail@sohailworks.com",
     telephone: "+44 7512 281222",
     address: {
@@ -96,7 +96,7 @@ const jsonLd = [
         name: "What's the process like when I start working with you?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Simple — we start with a free call to understand your goals, then I share a clear plan, timeline, and price. Once you approve, I build, you review, and we launch. You always know what's happening at every step.",
+          text: "Simple. We start with a free call to understand your goals, then I share a clear plan, timeline, and price. Once you approve, I build, you review, and we launch. You always know what's happening at every step.",
         },
       },
       {
@@ -104,7 +104,7 @@ const jsonLd = [
         name: "Do you offer a free consultation call?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Book a free call and we'll discuss your project, your goals, and the best way to build it — no pressure, no obligation.",
+          text: "Yes. Book a free call and we'll discuss your project, your goals, and the best way to build it, no pressure, no obligation.",
         },
       },
       {
@@ -120,7 +120,7 @@ const jsonLd = [
         name: "Can you build or redesign my WordPress website?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — I build fast, SEO-friendly WordPress websites from scratch, and I redesign existing sites that look outdated or load slowly. Every site is mobile-friendly and built to turn visitors into customers.",
+          text: "Yes, I build fast, SEO-friendly WordPress websites from scratch, and I redesign existing sites that look outdated or load slowly. Every site is mobile-friendly and built to turn visitors into customers.",
         },
       },
       {
@@ -128,7 +128,7 @@ const jsonLd = [
         name: "What can GoHighLevel do for my business?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "GoHighLevel brings your funnels, CRM, email, SMS, and bookings into one place. I set up funnels that capture leads, automations that follow up instantly, and pipelines that keep every lead organised — so no enquiry slips through.",
+          text: "GoHighLevel brings your funnels, CRM, email, SMS, and bookings into one place. I set up funnels that capture leads, automations that follow up instantly, and pipelines that keep every lead organised so no enquiry slips through.",
         },
       },
       {
@@ -136,7 +136,7 @@ const jsonLd = [
         name: "Do you build AI automations?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. I set up AI chatbots that answer customer questions, automations that follow up with leads, and workflows that save hours of manual work — all connected to your website or GoHighLevel.",
+          text: "Yes. I set up AI chatbots that answer customer questions, automations that follow up with leads, and workflows that save hours of manual work, all connected to your website or GoHighLevel.",
         },
       },
       {
@@ -144,7 +144,7 @@ const jsonLd = [
         name: "How much does a GoHighLevel setup cost?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "It depends on the scope — a basic funnel and CRM setup costs less than a full automation build. Share your requirements on a free call and I'll give you a fixed quote before we start, no hourly billing.",
+          text: "It depends on the scope. A basic funnel and CRM setup costs less than a full automation build. Share your requirements on a free call and I'll give you a fixed quote before we start, no hourly billing.",
         },
       },
       {
@@ -152,7 +152,7 @@ const jsonLd = [
         name: "Do you work with roofers, HVAC, plumbers and other local businesses?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — I mainly work with local service businesses in the US & UK: roofers, HVAC, plumbers, med spas, cleaning, builders and electricians. If your business runs on leads, bookings and follow-ups, GoHighLevel fits.",
+          text: "Yes, I mainly work with local service businesses in the US & UK: roofers, HVAC, plumbers, med spas, cleaning, builders and electricians. If your business runs on leads, bookings and follow-ups, GoHighLevel fits.",
         },
       },
       {
@@ -160,7 +160,7 @@ const jsonLd = [
         name: "Can you build a custom app with React / Next.js?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. For anything beyond a standard website — dashboards, booking systems, custom tools — I build fast, modern apps with React and Next.js, tailored exactly to how your business works.",
+          text: "Yes. For anything beyond a standard website, dashboards, booking systems, custom tools, I build fast, modern apps with React and Next.js, tailored exactly to how your business works.",
         },
       },
       {
@@ -168,7 +168,7 @@ const jsonLd = [
         name: "Can you set up a WooCommerce store?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. I build WooCommerce stores with simple checkout, secure payments, and easy product management — so you can start selling online without the technical headache.",
+          text: "Yes. I build WooCommerce stores with simple checkout, secure payments, and easy product management, so you can start selling online without the technical headache.",
         },
       },
       {
@@ -184,7 +184,7 @@ const jsonLd = [
         name: "Do you provide support after the website goes live?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes — I stay available after launch to fix any issues and help with small updates and provide free support for 2 months. I also offer monthly maintenance plans for updates, backups, and ongoing changes.",
+          text: "Yes, I stay available after launch to fix any issues and help with small updates and provide free support for 2 months. I also offer monthly maintenance plans for updates, backups, and ongoing changes.",
         },
       },
     ],

@@ -124,7 +124,7 @@ export default function Hero() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
             </span>
             <span className="whitespace-nowrap font-mono text-[10px] md:text-xs font-medium uppercase tracking-normal md:tracking-widest text-[var(--primary)]">
-              Hello, I&apos;m Sohail — Available for projects
+              Hello, I&apos;m Sohail, Available for projects
             </span>
           </div>
 
