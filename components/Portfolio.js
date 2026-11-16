@@ -19,11 +19,47 @@ const PROJECTS = [
   },
   {
     image: "/images/portfolio/project-4.webp",
-    category: "wordpress",
+    category: "react",
   },
   {
-    image: "/images/portfolio/project-5.webp",
-    category: "wordpress",
+    image: "/images/portfolio/Sales_and_Booking_Funnels_1.webp",
+    category: "ghl",
+  },
+  {
+    image: "/images/portfolio/Sales_and_Booking_Funnels_2.webp",
+    category: "ghl",
+  },
+  {
+    image: "/images/portfolio/Sales_and_Booking_Funnels_3.webp",
+    category: "ghl",
+  },
+  {
+    image: "/images/portfolio/Sales_and_Booking_Funnels_4.webp",
+    category: "ghl",
+  },
+  {
+    image: "/images/portfolio/Sales_and_Booking_Funnels_5.webp",
+    category: "ghl",
+  },
+  {
+    image: "/images/portfolio/Sales_and_Booking_Funnels_6.webp",
+    category: "ghl",
+  },
+  {
+    image: "/images/portfolio/Sales_and_Booking_Funnels_7.webp",
+    category: "ghl",
+  },
+  {
+    image: "/images/portfolio/Sales_and_Booking_Funnels_8.webp",
+    category: "ghl",
+  },
+  {
+    image: "/images/portfolio/Sales_and_Booking_Funnels_9.webp",
+    category: "ghl",
+  },
+  {
+    image: "/images/portfolio/Sales_and_Booking_Funnels_1.webp",
+    category: "ghl",
   },
 ];
 

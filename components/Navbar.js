@@ -90,7 +90,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center text-2xl">
             <Image
               src="/images/logo.svg"
-              alt="Sohail — logo"
+              alt="Sohail logo"
               width={35}
               height={35}
             />

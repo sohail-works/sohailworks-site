@@ -10,11 +10,11 @@ import { Plus } from "lucide-react";
 const FAQS = [
   {
     q: "What's the process like when I start working with you?",
-    a: "Simple — we start with a free call to understand your goals, then I share a clear plan, timeline, and price. Once you approve, I build, you review, and we launch. You always know what's happening at every step.",
+    a: "Simple. We start with a free call to understand your goals, then I share a clear plan, timeline, and price. Once you approve, I build, you review, and we launch. You always know what's happening at every step.",
   },
   {
     q: "Do you offer a free consultation call?",
-    a: "Yes. Book a free call and we'll discuss your project, your goals, and the best way to build it — no pressure, no obligation.",
+    a: "Yes. Book a free call and we'll discuss your project, your goals, and the best way to build it, no pressure, no obligation.",
   },
   {
     q: "How long does a typical project take?",
@@ -22,33 +22,33 @@ const FAQS = [
   },
   {
     q: "Can you build or redesign my WordPress website?",
-    a: "Yes — I build fast, SEO-friendly WordPress websites from scratch, and I redesign existing sites that look outdated or load slowly. Every site is mobile-friendly and built to turn visitors into customers.",
+    a: "Yes, I build fast, SEO-friendly WordPress websites from scratch, and I redesign existing sites that look outdated or load slowly. Every site is mobile-friendly and built to turn visitors into customers.",
   },
   {
     q: "What can GoHighLevel do for my business?",
-    a: "GoHighLevel brings your funnels, CRM, email, SMS, and bookings into one place. I set up funnels that capture leads, automations that follow up instantly, and pipelines that keep every lead organised — so no enquiry slips through.",
+    a: "GoHighLevel brings your funnels, CRM, email, SMS, and bookings into one place. I set up funnels that capture leads, automations that follow up instantly, and pipelines that keep every lead organised so no enquiry slips through.",
   },
   {
     q: "Do you build AI automations?",
-    a: "Yes. I set up AI chatbots that answer customer questions, automations that follow up with leads, and workflows that save hours of manual work — all connected to your website or GoHighLevel.",
+    a: "Yes. I set up AI chatbots that answer customer questions, automations that follow up with leads, and workflows that save hours of manual work, all connected to your website or GoHighLevel.",
   },
 
   {
     q: "How much does a GoHighLevel setup cost?",
-    a: "It depends on the scope — a basic funnel and CRM setup costs less than a full automation build. Share your requirements on a free call and I'll give you a fixed quote before we start, no hourly billing.",
+    a: "It depends on the scope. A basic funnel and CRM setup costs less than a full automation build. Share your requirements on a free call and I'll give you a fixed quote before we start, no hourly billing.",
   },
   {
     q: "Do you work with roofers, HVAC, plumbers and other local businesses?",
-    a: "Yes — I mainly work with local service businesses in the US & UK: roofers, HVAC, plumbers, med spas, cleaning, builders and electricians. If your business runs on leads, bookings and follow-ups, GoHighLevel fits.",
+    a: "Yes, I mainly work with local service businesses in the US & UK: roofers, HVAC, plumbers, med spas, cleaning, builders and electricians. If your business runs on leads, bookings and follow-ups, GoHighLevel fits.",
   },
 
   {
     q: "Can you build a custom app with React / Next.js?",
-    a: "Yes. For anything beyond a standard website — dashboards, booking systems, custom tools — I build fast, modern apps with React and Next.js, tailored exactly to how your business works.",
+    a: "Yes. For anything beyond a standard website, dashboards, booking systems, custom tools, I build fast, modern apps with React and Next.js, tailored exactly to how your business works.",
   },
   {
     q: "Can you set up a WooCommerce store?",
-    a: "Yes. I build WooCommerce stores with simple checkout, secure payments, and easy product management — so you can start selling online without the technical headache.",
+    a: "Yes. I build WooCommerce stores with simple checkout, secure payments, and easy product management, so you can start selling online without the technical headache.",
   },
   {
     q: "What payment methods do you accept?",
@@ -56,7 +56,7 @@ const FAQS = [
   },
   {
     q: "Do you provide support after the website goes live?",
-    a: "Yes — I stay available after launch to fix any issues and help with small updates and provide free support for 2 months. I also offer monthly maintenance plans for updates, backups, and ongoing changes.",
+    a: "Yes, I stay available after launch to fix any issues and help with small updates and provide free support for 2 months. I also offer monthly maintenance plans for updates, backups, and ongoing changes.",
   },
 ];
 
