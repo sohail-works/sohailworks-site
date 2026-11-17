@@ -23,7 +23,7 @@ const SERVICES = [
       "Lead Nurturing and Follow-Up Systems",
     ],
     cta: "Explore GHL",
-    href: "/gohighlevel-expert/",
+    href: "/gohighlevel-expert",
   },
   {
     key: "wordpress",
@@ -40,7 +40,7 @@ const SERVICES = [
       "Performance and Responsive Optimization",
     ],
     cta: "Explore WordPress",
-    href: "/wordpress-development-services/"
+    href: "/wordpress-development-services"
   },
   {
     key: "frontend",
@@ -57,7 +57,7 @@ const SERVICES = [
       "API Integration and Interactive Experiences",
     ],
     cta: "Explore Frontend",
-    href: "/web-app-development-services/",
+    href: "/web-app-development-services",
 
   },
 ];
@@ -294,6 +294,11 @@ export default function Services() {
             );
           })}
         </div>
+
+        {/* ── Niche strip ── */}
+        <p className="mt-16 text-center font-mono text-xs tracking-[0.18em] text-[var(--text-muted)]">
+          Built for roofers, HVAC, plumbers, med spas, cleaning, builders & electricians in the US & UK.
+        </p>
       </div>
     </section>
   );
