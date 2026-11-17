@@ -1,23 +1,42 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const links = [
     { label: "Home", href: "/#home" },
-    { label: "Services", href: "/#services" },
+    {
+      label: "Services",
+      href: "/#services",
+      children: [
+        { label: "GoHighLevel Expert", href: "/gohighlevel-expert" },
+        { label: "WordPress Development", href: "/wordpress-development-services" },
+        { label: "Web App Development", href: "/web-app-development-services" },
+      ],
+    },
     { label: "Portfolio", href: "/#portfolio" },
     { label: "About", href: "/#about" },
     {label: "Reviews", href: "/#reviews"},
     { label: "Contact", href: "/#contact" },
   ];
 
+  const servicePages = [
+    "/gohighlevel-expert",
+    "/wordpress-development-services",
+    "/web-app-development-services",
+  ];
+
   const [darkMode, setDarkMode] = useState(false);
   const [active, setActive] = useState("/#home");
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const pathname = usePathname();
+  const isServicesActive =
+    active === "/#services" || servicePages.includes(pathname);
 
   useEffect(() => {
     if (open) {
@@ -100,21 +119,63 @@ export default function Navbar() {
           </Link>
 
           <ul className="hidden md:flex items-center gap-2">
-            {links.map((link) => (
-              <li key={link.href}>
-                <Link
-                  onClick={() => setActive(link.href)}
-                  href={link.href}
-                  className={`rounded-lg text-[15px] font-semibold px-4 py-2 transition-colors ${
-                    active === link.href
-                      ? "bg-[var(--primary-light)] text-[var(--primary)]"
-                      : "text-[var(--text-muted)] hover:bg-[var(--primary-light)] hover:text-[var(--text-primary)]"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {links.map((link) => {
+              if (link.children) {
+                return (
+                  <li key={link.href} className="group relative">
+                    <Link
+                      onClick={() => setActive(link.href)}
+                      href={link.href}
+                      className={`inline-flex items-center gap-1 rounded-lg text-[15px] font-semibold px-4 py-2 transition-colors ${
+                        isServicesActive
+                          ? "bg-[var(--primary-light)] text-[var(--primary)]"
+                          : "text-[var(--text-muted)] hover:bg-[var(--primary-light)] hover:text-[var(--text-primary)]"
+                      }`}
+                    >
+                      {link.label}
+                      <ChevronDown
+                        size={16}
+                        className="transition-transform duration-200 group-hover:rotate-180"
+                      />
+                    </Link>
+                    {/* ── Dropdown — hover pe khulta hai ── */}
+                    <div className="invisible absolute left-0 top-full z-50 pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                      <div className="w-72 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-2 shadow-xl">
+                        {link.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            onClick={() => setActive(link.href)}
+                            className={`block rounded-lg px-4 py-2.5 text-[15px] font-semibold transition-colors ${
+                              pathname === child.href
+                                ? "bg-[var(--primary-light)] text-[var(--primary)]"
+                                : "text-[var(--text-muted)] hover:bg-[var(--primary-light)] hover:text-[var(--text-primary)]"
+                            }`}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </li>
+                );
+              }
+              return (
+                <li key={link.href}>
+                  <Link
+                    onClick={() => setActive(link.href)}
+                    href={link.href}
+                    className={`rounded-lg text-[15px] font-semibold px-4 py-2 transition-colors ${
+                      active === link.href
+                        ? "bg-[var(--primary-light)] text-[var(--primary)]"
+                        : "text-[var(--text-muted)] hover:bg-[var(--primary-light)] hover:text-[var(--text-primary)]"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
 
           <div className="flex items-center gap-4">
@@ -177,24 +238,85 @@ export default function Navbar() {
           }`}
         >
           <ul className="space-y-1 px-6 py-4">
-            {links.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  onClick={() => {
-                    setActive(link.href);
-                    setOpen(false);
-                  }}
-                  className={`block rounded-lg px-4 py-3 text-[15px] font-semibold transition-colors ${
-                    active === link.href
-                      ? "bg-[var(--primary-light)] text-[var(--primary)]"
-                      : "text-[var(--text-muted)] hover:bg-[var(--primary-light)] hover:text-[var(--text-primary)]"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {links.map((link) => {
+              if (link.children) {
+                return (
+                  <li key={link.href}>
+                    <button
+                      onClick={() => setServicesOpen(!servicesOpen)}
+                      aria-expanded={servicesOpen}
+                      className={`flex w-full items-center justify-between rounded-lg px-4 py-3 text-[15px] font-semibold transition-colors ${
+                        isServicesActive
+                          ? "bg-[var(--primary-light)] text-[var(--primary)]"
+                          : "text-[var(--text-muted)] hover:bg-[var(--primary-light)] hover:text-[var(--text-primary)]"
+                      }`}
+                    >
+                      {link.label}
+                      <ChevronDown
+                        size={16}
+                        className={`transition-transform duration-200 ${
+                          servicesOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {servicesOpen && (
+                      <ul className="mt-1 space-y-1 pl-8">
+                        <li>
+                          <Link
+                            href="/#services"
+                            onClick={() => {
+                              setActive("/#services");
+                              setServicesOpen(false);
+                              setOpen(false);
+                            }}
+                            className="block rounded-lg px-4 py-2.5 text-[15px] font-semibold text-[var(--text-muted)] transition-colors hover:bg-[var(--primary-light)] hover:text-[var(--text-primary)]"
+                          >
+                            All Services
+                          </Link>
+                        </li>
+                        {link.children.map((child) => (
+                          <li key={child.href}>
+                            <Link
+                              href={child.href}
+                              onClick={() => {
+                                setActive("/#services");
+                                setServicesOpen(false);
+                                setOpen(false);
+                              }}
+                              className={`block rounded-lg px-4 py-2.5 text-[15px] font-semibold transition-colors ${
+                                pathname === child.href
+                                  ? "bg-[var(--primary-light)] text-[var(--primary)]"
+                                  : "text-[var(--text-muted)] hover:bg-[var(--primary-light)] hover:text-[var(--text-primary)]"
+                              }`}
+                            >
+                              {child.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                );
+              }
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    onClick={() => {
+                      setActive(link.href);
+                      setOpen(false);
+                    }}
+                    className={`block rounded-lg px-4 py-3 text-[15px] font-semibold transition-colors ${
+                      active === link.href
+                        ? "bg-[var(--primary-light)] text-[var(--primary)]"
+                        : "text-[var(--text-muted)] hover:bg-[var(--primary-light)] hover:text-[var(--text-primary)]"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <div className="px-6 pb-6">
             <Link
