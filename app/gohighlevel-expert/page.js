@@ -28,7 +28,7 @@ export const metadata = {
   title:
     "Your GoHighLevel Expert Guy | GoHighLevel Setup, Funnels & Automation | SohailWorks",
   description:
-    "I help US and UK small businesses get more bookings with GoHighLevel. Funnels, CRM and automation set up properly, so no lead ever goes cold.",
+    "Your go high level expert for US and UK small businesses. I set up GoHighLevel funnels, CRM and automation properly, so you get more bookings and no lead ever goes cold.",
   alternates: {
     canonical: "https://www.sohailworks.com/gohighlevel-expert",
   },
@@ -36,7 +36,7 @@ export const metadata = {
     title:
       "Your GoHighLevel Expert Guy | GoHighLevel Setup, Funnels & Automation | SohailWorks",
     description:
-      "I help US and UK small businesses get more bookings with GoHighLevel. Funnels, CRM and automation set up properly, so no lead ever goes cold.",
+      "Your go high level expert for US and UK small businesses. I set up GoHighLevel funnels, CRM and automation properly, so you get more bookings and no lead ever goes cold.",
     url: "https://www.sohailworks.com/gohighlevel-expert",
     siteName: "SohailWorks",
     type: "website",
@@ -46,7 +46,7 @@ export const metadata = {
     title:
       "Your GoHighLevel Expert Guy | GoHighLevel Setup, Funnels & Automation | SohailWorks",
     description:
-      "I help US and UK small businesses get more bookings with GoHighLevel. Funnels, CRM and automation set up properly, so no lead ever goes cold.",
+      "Your go high level expert for US and UK small businesses. I set up GoHighLevel funnels, CRM and automation properly, so you get more bookings and no lead ever goes cold.",
   },
 };
 
@@ -56,7 +56,7 @@ const jsonLd = [
     "@type": "Service",
     name: "GoHighLevel Expert Services",
     description:
-      "I help US and UK small businesses get more bookings with GoHighLevel. Funnels, CRM and automation set up properly, so no lead ever goes cold.",
+      "Your go high level expert for US and UK small businesses. I set up GoHighLevel funnels, CRM and automation properly, so you get more bookings and no lead ever goes cold.",
     url: "https://www.sohailworks.com/gohighlevel-expert",
     serviceType: "GoHighLevel Setup, Funnels & Automation",
     provider: {
@@ -104,22 +104,22 @@ const GHL_SERVICES = [
   {
     icon: Users,
     title: "CRM & Pipelines",
-    desc: "Pipelines that keep every lead organised, from first click to closed deal.",
+    desc: "GoHighLevel CRM automation with pipelines that keep every lead organised, from first click to closed deal.",
   },
   {
     icon: Workflow,
     title: "Workflow Automation",
-    desc: "Automations that follow up, assign and remind, without manual work.",
+    desc: "GoHighLevel workflow automation that follows up, assigns and reminds, without manual work.",
   },
   {
     icon: CalendarCheck,
     title: "Forms & Calendars",
-    desc: "Forms and booking calendars that turn visitors into appointments.",
+    desc: "GoHighLevel calendar setup with forms and booking calendars that turn visitors into appointments.",
   },
   {
     icon: ShieldCheck,
     title: "A2P 10DLC Registration",
-    desc: "Carrier registration done right, so your SMS actually gets delivered.",
+    desc: "A2P 10DLC registration done right, so your SMS actually gets delivered.",
   },
   {
     icon: Mic,
@@ -164,7 +164,7 @@ const GHL_SERVICES = [
   {
     icon: Star,
     title: "Review Automation",
-    desc: "Automatic review requests that grow your Google reviews.",
+    desc: "GoHighLevel reputation management with automatic review requests that grow your Google reviews.",
   },
   {
     icon: Mail,
@@ -231,9 +231,9 @@ export default function GoHighLevelPage() {
             <p className="mx-auto max-w-[600px] text-base text-[var(--text-secondary)] md:mx-0 md:text-lg">
               Most businesses do not have a lead problem. They have a follow-up
               problem. Leads come in, sit in a messy pipeline, and go cold while
-              you are busy doing the work. I fix that. I build GoHighLevel
-              systems that catch every lead, chase it automatically, book the
-              call, and keep you out of the manual mess.
+              you are busy doing the work. I fix that. As your go high level
+              expert, I build GoHighLevel systems that catch every lead, chase
+              it automatically, book the call, and keep you out of the manual mess.
             </p>
 
             {/* Buttons */}
@@ -284,7 +284,8 @@ export default function GoHighLevelPage() {
           </h2>
           <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
             From funnels and CRM to AI agents and migrations, every piece of
-            your GoHighLevel system, set up properly in one place.
+            your GoHighLevel system, set up properly in one place. Hire a
+            GoHighLevel developer who builds systems that ship, not just setup.
           </p>
 
           {/* Grid */}
@@ -314,6 +315,24 @@ export default function GoHighLevelPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── GoHighLevel vs HubSpot ── */}
+      <section className="relative py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
+            GOHIGHLEVEL VS HUBSPOT
+          </p>
+          <h2 className="mt-4 font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
+            GoHighLevel vs HubSpot
+          </h2>
+          <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
+            HubSpot is a great CRM, but it gets expensive fast, and funnels, calendars and automation cost extra. GoHighLevel puts the CRM, funnels, calendars, email, SMS and automation in one place, for one price. If you want bookings without the HubSpot bill, GoHighLevel is the better fit for a small business.
+          </p>
+          <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
+            Already on HubSpot? I move your contacts, pipelines and workflows to GoHighLevel without losing data or momentum. See HubSpot Migration above.
+          </p>
         </div>
       </section>
     </main>

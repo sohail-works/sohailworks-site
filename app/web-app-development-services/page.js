@@ -29,14 +29,14 @@ const Footer = dynamic(() => import("@/components/Footer"));
 export const metadata = {
   title: "Web App Development Services | Hire React Developer | SohailWorks",
   description:
-    "Web app development services that ship fast. I build React & Next.js web apps, MVPs and dashboards for US & UK businesses. Clean code, on time.",
+    "Hire React developer for web app development services that ship fast. I build React & Next.js web apps, MVPs and dashboards for US & UK businesses. Clean code, on time.",
   alternates: {
     canonical: "https://www.sohailworks.com/web-app-development-services",
   },
   openGraph: {
     title: "Web App Development Services | Hire React Developer | SohailWorks",
     description:
-      "Web app development services that ship fast. I build React & Next.js web apps, MVPs and dashboards for US & UK businesses. Clean code, on time.",
+      "Hire React developer for web app development services that ship fast. I build React & Next.js web apps, MVPs and dashboards for US & UK businesses. Clean code, on time.",
     url: "https://www.sohailworks.com/web-app-development-services",
     siteName: "SohailWorks",
     type: "website",
@@ -45,7 +45,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Web App Development Services | Hire React Developer | SohailWorks",
     description:
-      "Web app development services that ship fast. I build React & Next.js web apps, MVPs and dashboards for US & UK businesses. Clean code, on time.",
+      "Hire React developer for web app development services that ship fast. I build React & Next.js web apps, MVPs and dashboards for US & UK businesses. Clean code, on time.",
   },
 };
 
@@ -55,7 +55,7 @@ const jsonLd = [
     "@type": "Service",
     name: "Web App Development Services",
     description:
-      "Web app development services that ship fast. I build React & Next.js web apps, MVPs and dashboards for US & UK businesses. Clean code, on time.",
+      "Hire React developer for web app development services that ship fast. I build React & Next.js web apps, MVPs and dashboards for US & UK businesses. Clean code, on time.",
     url: "https://www.sohailworks.com/web-app-development-services",
     serviceType: "Web App Development Services",
     provider: {
@@ -102,12 +102,12 @@ const REACT_SERVICES = [
   {
     icon: Zap,
     title: "Next.js Development",
-    desc: "SEO-friendly Next.js websites and apps with server-side rendering.",
+    desc: "SEO-friendly Next.js development services with server-side rendering.",
   },
   {
     icon: Rocket,
     title: "MVP Development",
-    desc: "Your idea validated fast, with a working MVP in weeks, not months.",
+    desc: "MVP development services that validate your idea fast, with a working MVP in weeks, not months.",
   },
   {
     icon: Cloud,
@@ -147,7 +147,7 @@ const REACT_SERVICES = [
   {
     icon: ArrowRightLeft,
     title: "Next.js Migration",
-    desc: "Move from WordPress or Webflow to Next.js without losing traffic.",
+    desc: "Hire Next.js developer help to move from WordPress or Webflow to Next.js without losing traffic.",
   },
   {
     icon: Layers,
@@ -269,7 +269,7 @@ export default function WebAppDevelopmentServicesPage() {
               React & Next.js Services
             </h2>
             <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
-              From MVPs and SaaS products to ecommerce stores and dashboards, every kind of web app, built fast and built to grow.
+              From MVPs and SaaS products to ecommerce stores and dashboards, every kind of web app, built fast and built to grow. Hire React developer expertise without the agency price.
             </p>
             <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {REACT_SERVICES.map((service) => (
