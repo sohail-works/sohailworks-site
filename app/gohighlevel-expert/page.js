@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 const Footer = dynamic(() => import("@/components/Footer"));
 import { GHLWorkflowVisual } from "@/components/GHLWorkflowVisual";
+import { VsHubSpotVisual } from "@/components/VsHubSpotVisual";
 import {
   Filter,
   Code2,
@@ -319,20 +320,29 @@ export default function GoHighLevelPage() {
       </section>
 
       {/* ── GoHighLevel vs HubSpot ── */}
-      <section className="relative py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
-            GOHIGHLEVEL VS HUBSPOT
-          </p>
-          <h2 className="mt-4 font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
-            GoHighLevel vs HubSpot
-          </h2>
-          <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
-            HubSpot is a great CRM, but it gets expensive fast, and funnels, calendars and automation cost extra. GoHighLevel puts the CRM, funnels, calendars, email, SMS and automation in one place, for one price. If you want bookings without the HubSpot bill, GoHighLevel is the better fit for a small business.
-          </p>
-          <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
-            Already on HubSpot? I move your contacts, pipelines and workflows to GoHighLevel without losing data or momentum. See HubSpot Migration above.
-          </p>
+      <section className="relative pb-24 pt-8">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-2">
+          <div>
+            <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
+              GOHIGHLEVEL VS HUBSPOT
+            </p>
+            <h2 className="mt-4 font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
+              GoHighLevel vs HubSpot
+            </h2>
+            <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
+              HubSpot is a great CRM, but it gets expensive fast, and funnels, calendars and automation cost extra. GoHighLevel puts the CRM, funnels, calendars, email, SMS and automation in one place, for one price. If you want bookings without the HubSpot bill, GoHighLevel is the better fit for a small business.
+            </p>
+            <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
+              Already on HubSpot? I move your contacts, pipelines and workflows to GoHighLevel without losing data or momentum. See HubSpot Migration above.
+            </p>
+          </div>
+          <div className="relative flex items-center justify-center">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#F97316] opacity-25 blur-3xl"
+            />
+            <VsHubSpotVisual />
+          </div>
         </div>
       </section>
     </main>
