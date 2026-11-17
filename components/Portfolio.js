@@ -129,7 +129,8 @@ export default function Portfolio() {
                   alt={`Project ${i + 1}`}
                   fill
                   loading="lazy"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={65}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
                   className={`object-cover transition-[object-position] duration-[5000ms] ease-in-out group-hover:object-bottom ${
                     tapped === p.image ? "object-bottom" : "object-top"
                   }`}

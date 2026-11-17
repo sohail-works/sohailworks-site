@@ -198,8 +198,8 @@ export default function Hero() {
                 <Image
                   src="/images/profile.webp"
                   alt="Sohail"
-                  width={400}
-                  height={400}
+                  width={256}
+                  height={256}
                   priority
                   className="h-full w-full scale-[2.2] object-cover object-[50%_30%] origin-[46%_10%]"
                 />
