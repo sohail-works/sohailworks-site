@@ -30,14 +30,14 @@ export const metadata = {
   description:
     "I help US and UK small businesses get more bookings with GoHighLevel. Funnels, CRM and automation set up properly, so no lead ever goes cold.",
   alternates: {
-    canonical: "https://www.sohailworks.com/gohighlevel-expert/",
+    canonical: "https://www.sohailworks.com/gohighlevel-expert",
   },
   openGraph: {
     title:
       "Your GoHighLevel Expert Guy | GoHighLevel Setup, Funnels & Automation | SohailWorks",
     description:
       "I help US and UK small businesses get more bookings with GoHighLevel. Funnels, CRM and automation set up properly, so no lead ever goes cold.",
-    url: "https://www.sohailworks.com/gohighlevel-expert/",
+    url: "https://www.sohailworks.com/gohighlevel-expert",
     siteName: "SohailWorks",
     type: "website",
   },
@@ -57,7 +57,7 @@ const jsonLd = [
     name: "GoHighLevel Expert Services",
     description:
       "I help US and UK small businesses get more bookings with GoHighLevel. Funnels, CRM and automation set up properly, so no lead ever goes cold.",
-    url: "https://www.sohailworks.com/gohighlevel-expert/",
+    url: "https://www.sohailworks.com/gohighlevel-expert",
     serviceType: "GoHighLevel Setup, Funnels & Automation",
     provider: {
       "@type": "Person",
@@ -83,7 +83,7 @@ const jsonLd = [
         "@type": "ListItem",
         position: 2,
         name: "GoHighLevel Expert",
-        item: "https://www.sohailworks.com/gohighlevel-expert/",
+        item: "https://www.sohailworks.com/gohighlevel-expert",
       },
     ],
   },

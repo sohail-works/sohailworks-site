@@ -31,13 +31,13 @@ export const metadata = {
   description:
     "WordPress development services for US & UK small businesses. Custom websites, WooCommerce stores and Elementor pages, built fast and kept running with care plans.",
   alternates: {
-    canonical: "https://www.sohailworks.com/wordpress-development-services/",
+    canonical: "https://www.sohailworks.com/wordpress-development-services",
   },
   openGraph: {
     title: "WordPress Development Services | Custom Websites, WooCommerce & Maintenance | SohailWorks",
     description:
       "WordPress development services for US & UK small businesses. Custom websites, WooCommerce stores and Elementor pages, built fast and kept running with care plans.",
-    url: "https://www.sohailworks.com/wordpress-development-services/",
+    url: "https://www.sohailworks.com/wordpress-development-services",
     siteName: "SohailWorks",
     type: "website",
   },
@@ -56,7 +56,7 @@ const jsonLd = [
     name: "WordPress Development Services",
     description:
       "WordPress development services for US & UK small businesses. Custom websites, WooCommerce stores and Elementor pages, built fast and kept running with care plans.",
-    url: "https://www.sohailworks.com/wordpress-development-services/",
+    url: "https://www.sohailworks.com/wordpress-development-services",
     serviceType: "WordPress Development Services",
     provider: {
       "@type": "Person",
@@ -82,7 +82,7 @@ const jsonLd = [
         "@type": "ListItem",
         position: 2,
         name: "WordPress Development Services",
-        item: "https://www.sohailworks.com/wordpress-development-services/",
+        item: "https://www.sohailworks.com/wordpress-development-services",
       },
     ],
   },

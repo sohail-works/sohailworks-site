@@ -31,13 +31,13 @@ export const metadata = {
   description:
     "Web app development services that ship fast. I build React & Next.js web apps, MVPs and dashboards for US & UK businesses. Clean code, on time.",
   alternates: {
-    canonical: "https://www.sohailworks.com/web-app-development-services/",
+    canonical: "https://www.sohailworks.com/web-app-development-services",
   },
   openGraph: {
     title: "Web App Development Services | Hire React Developer | SohailWorks",
     description:
       "Web app development services that ship fast. I build React & Next.js web apps, MVPs and dashboards for US & UK businesses. Clean code, on time.",
-    url: "https://www.sohailworks.com/web-app-development-services/",
+    url: "https://www.sohailworks.com/web-app-development-services",
     siteName: "SohailWorks",
     type: "website",
   },
@@ -56,7 +56,7 @@ const jsonLd = [
     name: "Web App Development Services",
     description:
       "Web app development services that ship fast. I build React & Next.js web apps, MVPs and dashboards for US & UK businesses. Clean code, on time.",
-    url: "https://www.sohailworks.com/web-app-development-services/",
+    url: "https://www.sohailworks.com/web-app-development-services",
     serviceType: "Web App Development Services",
     provider: {
       "@type": "Person",
@@ -82,7 +82,7 @@ const jsonLd = [
         "@type": "ListItem",
         position: 2,
         name: "Web App Development Services",
-        item: "https://www.sohailworks.com/web-app-development-services/",
+        item: "https://www.sohailworks.com/web-app-development-services",
       },
     ],
   },
