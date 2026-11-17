@@ -7,19 +7,19 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: "https://www.sohailworks.com/gohighlevel-expert/",
+      url: "https://www.sohailworks.com/gohighlevel-expert",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://www.sohailworks.com/wordpress-development-services/",
+      url: "https://www.sohailworks.com/wordpress-development-services",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://www.sohailworks.com/web-app-development-services/",
+      url: "https://www.sohailworks.com/web-app-development-services",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
