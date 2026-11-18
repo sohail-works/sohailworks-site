@@ -29,14 +29,14 @@ const Footer = dynamic(() => import("@/components/Footer"));
 export const metadata = {
   title: "WordPress Development Services | Custom Websites, WooCommerce & Maintenance | SohailWorks",
   description:
-    "WordPress development services for US & UK small businesses. Custom websites, WooCommerce stores and Elementor pages, built fast and kept running with care plans.",
+    "Website redesign services and WordPress development services for US & UK small businesses. Hire a freelance WordPress developer for custom websites, WooCommerce stores and WordPress web design, built fast and kept running with care plans.",
   alternates: {
     canonical: "https://www.sohailworks.com/wordpress-development-services",
   },
   openGraph: {
     title: "WordPress Development Services | Custom Websites, WooCommerce & Maintenance | SohailWorks",
     description:
-      "WordPress development services for US & UK small businesses. Custom websites, WooCommerce stores and Elementor pages, built fast and kept running with care plans.",
+      "Website redesign services and WordPress development services for US & UK small businesses. Hire a freelance WordPress developer for custom websites, WooCommerce stores and WordPress web design, built fast and kept running with care plans.",
     url: "https://www.sohailworks.com/wordpress-development-services",
     siteName: "SohailWorks",
     type: "website",
@@ -45,7 +45,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "WordPress Development Services | Custom Websites, WooCommerce & Maintenance | SohailWorks",
     description:
-      "WordPress development services for US & UK small businesses. Custom websites, WooCommerce stores and Elementor pages, built fast and kept running with care plans.",
+      "Website redesign services and WordPress development services for US & UK small businesses. Hire a freelance WordPress developer for custom websites, WooCommerce stores and WordPress web design, built fast and kept running with care plans.",
   },
 };
 
@@ -55,7 +55,7 @@ const jsonLd = [
     "@type": "Service",
     name: "WordPress Development Services",
     description:
-      "WordPress development services for US & UK small businesses. Custom websites, WooCommerce stores and Elementor pages, built fast and kept running with care plans.",
+      "Website redesign services and WordPress development services for US & UK small businesses. Hire a freelance WordPress developer for custom websites, WooCommerce stores and WordPress web design, built fast and kept running with care plans.",
     url: "https://www.sohailworks.com/wordpress-development-services",
     serviceType: "WordPress Development Services",
     provider: {
@@ -92,12 +92,12 @@ const WP_SERVICES = [
   {
     icon: Globe,
     title: "WordPress Development",
-    desc: "Custom WordPress websites, built fast and built to win clients.",
+    desc: "WordPress website development for small businesses: custom WordPress websites, built fast and built to win clients.",
   },
   {
     icon: LayoutTemplate,
     title: "Custom WordPress Websites",
-    desc: "A website built around your business, not a template that looks like everyone else.",
+    desc: "WordPress web design built around your business, not a template that looks like everyone else.",
   },
   {
     icon: Palette,
@@ -127,12 +127,12 @@ const WP_SERVICES = [
   {
     icon: ArrowRightLeft,
     title: "WordPress Migration",
-    desc: "Move from Wix, Squarespace, Webflow or Shopify to WordPress without losing traffic.",
+    desc: "Wix to WordPress migration, Webflow to WordPress migration and Squarespace to WordPress migration, plus Shopify moves, without losing traffic.",
   },
   {
     icon: Wrench,
     title: "WordPress Maintenance",
-    desc: "Updates, backups and fixes handled for you, every month.",
+    desc: "Website maintenance services: updates, backups and fixes handled for you, every month.",
   },
   {
     icon: ShieldCheck,
@@ -167,7 +167,7 @@ const WP_SERVICES = [
   {
     icon: Briefcase,
     title: "Small Business Websites",
-    desc: "Affordable WordPress websites for small businesses, built to bring in calls and bookings.",
+    desc: "Small business website design: affordable WordPress websites for small businesses, with a clear WordPress website cost upfront, built to bring in calls and bookings.",
   },
   {
     icon: GraduationCap,
@@ -177,7 +177,7 @@ const WP_SERVICES = [
   {
     icon: RefreshCw,
     title: "Website Redesign",
-    desc: "An old website rebuilt into a fast, modern one that actually converts.",
+    desc: "Website redesign services: an old website rebuilt into a fast, modern one that actually converts.",
   },
   {
     icon: PanelTop,
@@ -187,7 +187,7 @@ const WP_SERVICES = [
   {
     icon: LifeBuoy,
     title: "Emergency Support",
-    desc: "Hacked, broken or down? Emergency fixes that get your website back fast.",
+    desc: "WordPress rescue when you need it: hacked, broken or down? Emergency fixes that get your website back fast.",
   },
 ];
 
@@ -222,7 +222,7 @@ export default function WordPressDevelopmentServicesPage() {
               <div className="mx-auto h-[3px] w-32 rounded-full bg-gradient-brand md:mx-0"></div>
               {/* Intro paragraph */}
               <p className="mx-auto max-w-[600px] text-base text-[var(--text-secondary)] md:mx-0 md:text-lg">
-                WordPress development services that actually ship. Most WordPress websites never get finished properly. They get stuck with slow themes, bloated plugins and endless revisions, while your idea waits and competitors move ahead. I fix that. I build fast custom WordPress websites, WooCommerce stores and Elementor pages that launch in weeks, not months, and keep growing with your business.
+                WordPress development services that actually ship. Most WordPress websites never get finished properly. They get stuck with slow themes, bloated plugins and endless revisions, while your idea waits and competitors move ahead. I fix that. As a freelance WordPress developer, I handle WordPress website development and small business website design end to end: fast custom WordPress websites, WooCommerce stores and Elementor pages that launch in weeks, not months, and keep growing with your business.
               </p>
               {/* Buttons */}
               <div className="flex gap-4 justify-center md:justify-start">
@@ -267,7 +267,7 @@ export default function WordPressDevelopmentServicesPage() {
               WordPress Services
             </h2>
             <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
-              From custom websites and WooCommerce stores to maintenance and speed, every piece of your WordPress website, built properly in one place.
+              From custom websites and WooCommerce stores to website maintenance services and speed, every piece of your WordPress website, built properly in one place.
             </p>
             <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {WP_SERVICES.map((service) => (
