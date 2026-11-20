@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build --webpack",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "next dev",
+    "lint": "eslint",
+    "start": "next start"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
@@ -32,5 +32,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
     "tailwindcss": "^4"
+  },
+  "overrides": {
+    "minimatch": "^11.0.1"
   }
 }
