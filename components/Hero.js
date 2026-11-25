@@ -1,7 +1,7 @@
 "use client";
 import { GridPattern } from "@/components/ui/grid-pattern";
 import { Particles } from "@/components/ui/particles";
-import { Clock, Rocket, DollarSign, Star } from "lucide-react";
+import { Clock, Rocket, Star } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
@@ -46,20 +46,12 @@ export default function Hero() {
       sub: "WordPress, GHL & React",
     },
     {
-      icon: DollarSign,
-      value: "$15k+",
-      label: "Earned",
+      icon: Star,
+      value: "Top Rated",
+      label: "Seller",
       sub: "Fiverr & Upwork",
     },
-    {
-      icon: Star,
-      value: "4.8",
-      suffix: "/5.0",
-      label: "Client Rating",
-      sub: "Verified Client Reviews",
-    },
   ];
-
   const handleMouseMove = (e) => {
     const card = cardRef.current;
     if (!card) return;
@@ -129,35 +121,39 @@ export default function Hero() {
           </div>
 
           {/* Heading */}
-          <h1 className="font-display text-center text-3xl font-normal capitalize leading-snug md:text-left md:text-6xl md:leading-tight">
-            I build top websites
+          <h1 className="font-display text-center text-3xl font-normal capitalize leading-snug md:text-left md:text-5xl md:leading-tight">
+            I build websites and
             <br />
-            that win clients
+            GoHighLevel systems
             <br />
-            <span>for you!</span>
+            <span>that win clients for you</span>
           </h1>
           {/* Paragragh */}
           <div className="mx-auto h-[3px] w-32 rounded-full bg-gradient-brand md:mx-0"></div>
           <p className="mx-auto max-w-[600px] text-base text-[var(--text-secondary)] md:mx-0 md:text-lg">
             I help local businesses capture leads and close deals faster with{" "}
-            <span className="font-medium text-[var(--text-primary)]">
-              WordPress websites
-            </span>
+            <a
+              href="https://www.sohailworks.com/gohighlevel-expert"
+              className="font-medium text-[var(--text-primary)] underline decoration-[var(--primary)] decoration-2 underline-offset-4 hover:text-[var(--primary)]"
+            >
+              GoHighLevel CRM and automation
+            </a>
             ,{" "}
-            <span className="font-medium text-[var(--text-primary)]">
-              GoHighLevel funnels
-            </span>{" "}
+            <a
+              href="https://www.sohailworks.com/wordpress-development-services"
+              className="font-medium text-[var(--text-primary)] underline decoration-[var(--primary)] decoration-2 underline-offset-4 hover:text-[var(--primary)]"
+            >
+              WordPress websites
+            </a>{" "}
             and{" "}
-            <span className="font-medium text-[var(--text-primary)]">
-              automations
-            </span>
-            , and{" "}
-            <span className="font-medium text-[var(--text-primary)]">
-              React/Next.js
-            </span>{" "}
-            apps. With 5 years of experience and $15k+ earned as a Top Rated on
-            Fiverr & Upwork with proven track record, I bring both the strategy
-            and the hands-on build.
+            <a
+              href="https://www.sohailworks.com/web-app-development-services"
+              className="font-medium text-[var(--text-primary)] underline decoration-[var(--primary)] decoration-2 underline-offset-4 hover:text-[var(--primary)]"
+            >
+              Next.js apps
+            </a>{" "}
+            for roofers, HVAC, plumbers, med spas and other local service
+            businesses in the US and UK.
           </p>
 
           {/* Button Wrapper */}
@@ -248,7 +244,7 @@ export default function Hero() {
         </div>
       </div>
       {/* ── Stats strip ── */}
-      <div className="mt-14 grid grid-cols-1 gap-6 px-6 sm:px-0 lg:grid-cols-4">
+      <div className="mt-14 grid grid-cols-1 gap-6 px-6 sm:px-0 lg:grid-cols-3">
         {stats.map((stat, index) => (
           <div
             key={index}

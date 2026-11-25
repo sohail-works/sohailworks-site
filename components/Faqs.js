@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
 import { Plus } from "lucide-react";
 
 // ─── ─── Data ─── ───
@@ -105,21 +104,17 @@ function FaqItem({ faq, number, isOpen, onToggle }) {
           <Plus className="h-5 w-5" />
         </span>
       </button>
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
-          >
-            <p className="px-5 pb-5 leading-relaxed text-[var(--text-secondary)]">
-              {faq.a}
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        className={`grid transition-all duration-300 ease-in-out ${
+          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <p className="px-5 pb-5 leading-relaxed text-[var(--text-secondary)]">
+            {faq.a}
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -164,7 +159,7 @@ export default function Faqs() {
           </h2>
         </div>
 
-        {/* ── Two columns, 5 questions each ── */}
+        {/* ── Two columns, 6 questions each ── */}
         <div className="mt-12 grid gap-4 lg:grid-cols-2 lg:gap-6">
           {renderColumn(left, 0)}
           {renderColumn(right, 6)}

@@ -299,6 +299,18 @@ export default function WebAppDevelopmentServicesPage() {
             </div>
           </div>
         </section>
+
+         {/* ── Related service ── */}
+        <p className="mx-auto max-w-6xl px-6 pb-8 text-[var(--text-secondary)]">
+          Prefer a classic WordPress site instead of a custom app? See my{" "}
+          <a
+            href="https://www.sohailworks.com/wordpress-development-services"
+            className="text-[var(--primary)] underline underline-offset-2 hover:opacity-80"
+          >
+            WordPress development services
+          </a>
+          .
+        </p>
       </main>
       <Footer />
     </>

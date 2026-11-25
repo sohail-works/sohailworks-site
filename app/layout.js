@@ -28,13 +28,13 @@ const jetbrains = localFont({
 export const metadata = {
   metadataBase: new URL("https://www.sohailworks.com"),
   title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
-  description: "GoHighLevel expert for US & UK small businesses: GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
+  description: "GoHighLevel expert for US & UK small businesses: GHL funnels, automation & CRM, plus WordPress sites and Next.js apps. 5+ years, 100+ orders. Get a quote.",
     alternates: {
     canonical: "https://www.sohailworks.com/",
   },
   openGraph: {
     title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
-    description: "GoHighLevel expert for US & UK small businesses: GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
+    description: "GoHighLevel expert for US & UK small businesses: GHL funnels, automation & CRM, plus WordPress sites and Next.js apps. 5+ years, 100+ orders. Get a quote.",
     url: "https://www.sohailworks.com",
     siteName: "SohailWorks",
     type: "website",
@@ -42,7 +42,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
-    description: "GoHighLevel expert for US & UK small businesses: GHL funnels, automation & CRM, plus WordPress websites and React/Next.js apps. 5+ years, 100+ orders.",
+    description: "GoHighLevel expert for US & UK small businesses: GHL funnels, automation & CRM, plus WordPress sites and Next.js apps. 5+ years, 100+ orders. Get a quote.",
   },
 };
 
