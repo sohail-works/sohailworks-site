@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUp, ArrowUpRight, Calendar, MapPin, Phone } from "lucide-react";
+import { ArrowUp, ArrowUpRight, Calendar, Mail, MapPin, Phone } from "lucide-react";
 
 const WHATSAPP_NUMBER = "447512281222";
 const BOOKING_URL = "https://cal.com/sohail-qeijwg/book-a-call";
@@ -40,9 +40,17 @@ export default function Footer() {
                 <Phone className="h-4 w-4 text-[var(--text-muted)]" />
                 +44 7512 281222 (WhatsApp)
               </a>
+
+              <a
+                href="mailto:sohail@sohailworks.com"
+                className="flex items-center gap-2 transition-colors hover:text-[var(--primary)]"
+              >
+                <Mail className="h-4 w-4 text-[var(--text-muted)]" />
+                sohail@sohailworks.com
+              </a>
               <span className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-[var(--text-muted)]" />
-                3 North Street, Falkirk, FK2 7NF, United Kingdom
+                <MapPin className="h-4 w-4 text-[var(--text-muted)]" />3 North
+                Street, Falkirk, FK2 7NF, United Kingdom
               </span>
             </div>
           </div>
@@ -50,7 +58,7 @@ export default function Footer() {
           {/* ── Contact Me circle — opens WhatsApp ── */}
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-              "Hi Sohail, I want to discuss a project."
+              "Hi Sohail, I want to discuss a project.",
             )}`}
             target="_blank"
             rel="noopener noreferrer"

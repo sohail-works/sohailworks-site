@@ -101,7 +101,7 @@ const jsonLd = [
         name: "How much does a WordPress website cost?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A basic WordPress website starts from $1,000. Custom websites, WooCommerce stores and complex builds cost more, depending on the scope. Tell me what you need on a free call and I'll give you a fixed quote before we start.",
+          text: "It depends on the project requirements. Fill out the contact form, message me on WhatsApp, or email me with your requirements. Just tell me what you're looking for and I'll prepare the full project scope with a fixed budget.",
         },
       },
       {
@@ -133,7 +133,7 @@ const jsonLd = [
         name: "Do you offer WordPress maintenance after launch?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, I offer monthly care plans with updates, backups, security checks and fixes, so your website stays fast, secure and online.",
+          text: "Yes, I offer free support for 2 Months then monthly care plans with updates, backups, security checks and fixes, so your website stays fast, secure and online.",
         },
       },
     ],
@@ -281,7 +281,7 @@ const HOW_STEPS = [
 const WP_FAQS = [
   {
     q: "How much does a WordPress website cost?",
-    a: "A basic WordPress website starts from $1,000. Custom websites, WooCommerce stores and complex builds cost more, depending on the scope. Tell me what you need on a free call and I'll give you a fixed quote before we start.",
+    a: "It depends on the project requirements. Fill out the contact form, message me on WhatsApp, or email me with your requirements. Just tell me what you're looking for and I'll prepare the full project scope with a fixed budget.",
   },
   {
     q: "How long does a WordPress website take to build?",
@@ -297,7 +297,7 @@ const WP_FAQS = [
   },
   {
     q: "Do you offer WordPress maintenance after launch?",
-    a: "Yes, I offer monthly care plans with updates, backups, security checks and fixes, so your website stays fast, secure and online.",
+    a: "Yes, I offer free support for 2 Months then monthly care plans with updates, backups, security checks and fixes, so your website stays fast, secure and online.",
   },
 ];
 

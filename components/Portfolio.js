@@ -57,10 +57,6 @@ const PROJECTS = [
     image: "/images/portfolio/Sales_and_Booking_Funnels_9.webp",
     category: "ghl",
   },
-  {
-    image: "/images/portfolio/Sales_and_Booking_Funnels_1.webp",
-    category: "ghl",
-  },
 ];
 
 const FILTERS = [
@@ -119,7 +115,7 @@ export default function Portfolio() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {filtered.map((p, i) => (
             <div
-              key={p.image}
+              key={`${p.image}-${i}`}
               onClick={() => setTapped(tapped === p.image ? null : p.image)}
               className="group relative cursor-pointer rounded-xl bg-[var(--border-subtle)] p-[3px] transition-all duration-300 hover:bg-[image:var(--gradient-brand)] hover:shadow-[0_0_30px_rgba(249,115,22,0.25)]"
             >
