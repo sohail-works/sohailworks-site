@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { WordPressVisual } from "@/components/WordPressVisual";
 import { VisualReveal } from "@/components/VisualReveal";
+import FaqAccordion from "@/components/FaqAccordion";
 import {
   Globe,
   LayoutTemplate,
@@ -22,30 +23,35 @@ import {
   RefreshCw,
   PanelTop,
   LifeBuoy,
+  Phone,
+  ClipboardList,
+  Hammer,
+  Rocket,
+  Headphones,
 } from "lucide-react";
 
 const Footer = dynamic(() => import("@/components/Footer"));
 
 export const metadata = {
-  title: "WordPress Development Services | Custom Websites, WooCommerce & Maintenance | SohailWorks",
+  title: "WordPress Development Services | SohailWorks",
   description:
-    "Website redesign services and WordPress development services for US & UK small businesses. Hire a freelance WordPress developer for custom websites, WooCommerce stores and WordPress web design, built fast and kept running with care plans.",
+    "WordPress development services for US & UK small businesses: custom websites, WooCommerce stores and redesigns, built fast and kept running with care plans.",
   alternates: {
     canonical: "https://www.sohailworks.com/wordpress-development-services",
   },
   openGraph: {
-    title: "WordPress Development Services | Custom Websites, WooCommerce & Maintenance | SohailWorks",
+    title: "WordPress Development Services | SohailWorks",
     description:
-      "Website redesign services and WordPress development services for US & UK small businesses. Hire a freelance WordPress developer for custom websites, WooCommerce stores and WordPress web design, built fast and kept running with care plans.",
+      "WordPress development services for US & UK small businesses: custom websites, WooCommerce stores and redesigns, built fast and kept running with care plans.",
     url: "https://www.sohailworks.com/wordpress-development-services",
     siteName: "SohailWorks",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "WordPress Development Services | Custom Websites, WooCommerce & Maintenance | SohailWorks",
+    title: "WordPress Development Services | SohailWorks",
     description:
-      "Website redesign services and WordPress development services for US & UK small businesses. Hire a freelance WordPress developer for custom websites, WooCommerce stores and WordPress web design, built fast and kept running with care plans.",
+      "WordPress development services for US & UK small businesses: custom websites, WooCommerce stores and redesigns, built fast and kept running with care plans.",
   },
 };
 
@@ -55,7 +61,7 @@ const jsonLd = [
     "@type": "Service",
     name: "WordPress Development Services",
     description:
-      "Website redesign services and WordPress development services for US & UK small businesses. Hire a freelance WordPress developer for custom websites, WooCommerce stores and WordPress web design, built fast and kept running with care plans.",
+      "WordPress development services for US & UK small businesses: custom websites, WooCommerce stores and redesigns, built fast and kept running with care plans.",
     url: "https://www.sohailworks.com/wordpress-development-services",
     serviceType: "WordPress Development Services",
     provider: {
@@ -83,6 +89,52 @@ const jsonLd = [
         position: 2,
         name: "WordPress Development Services",
         item: "https://www.sohailworks.com/wordpress-development-services",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How much does a WordPress website cost?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "A basic WordPress website starts from $1,000. Custom websites, WooCommerce stores and complex builds cost more, depending on the scope. Tell me what you need on a free call and I'll give you a fixed quote before we start.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How long does a WordPress website take to build?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most WordPress websites take 1–2 weeks, and larger stores or custom builds take longer. You'll get a clear timeline before we start.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you build WooCommerce stores?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, I build WooCommerce stores with products, payments and checkout, plus delivery and ordering features for restaurants and takeaways.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you redesign my existing website?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, I rebuild old websites into fast, modern WordPress sites, keeping your content and working to protect your Google rankings.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you offer WordPress maintenance after launch?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, I offer monthly care plans with updates, backups, security checks and fixes, so your website stays fast, secure and online.",
+        },
       },
     ],
   },
@@ -191,6 +243,64 @@ const WP_SERVICES = [
   },
 ];
 
+// ─── ─── How we work steps ─── ───
+const HOW_STEPS = [
+  {
+    icon: Phone,
+    num: "01",
+    title: "Free call",
+    desc: "We start with a free call to understand your goals and how your business wins jobs today.",
+  },
+  {
+    icon: ClipboardList,
+    num: "02",
+    title: "Plan",
+    desc: "You get a clear plan with a timeline and a fixed price in writing before any work starts.",
+  },
+  {
+    icon: Hammer,
+    num: "03",
+    title: "Build",
+    desc: "I build your WordPress website, and you review it at each step.",
+  },
+  {
+    icon: Rocket,
+    num: "04",
+    title: "Launch",
+    desc: "I test everything, go live, and show you how to use it.",
+  },
+  {
+    icon: Headphones,
+    num: "05",
+    title: "Support",
+    desc: "I stay available after launch to fix issues and help with updates.",
+  },
+];
+
+// ─── ─── WordPress FAQ ─── ───
+const WP_FAQS = [
+  {
+    q: "How much does a WordPress website cost?",
+    a: "A basic WordPress website starts from $1,000. Custom websites, WooCommerce stores and complex builds cost more, depending on the scope. Tell me what you need on a free call and I'll give you a fixed quote before we start.",
+  },
+  {
+    q: "How long does a WordPress website take to build?",
+    a: "Most WordPress websites take 1–2 weeks, and larger stores or custom builds take longer. You'll get a clear timeline before we start.",
+  },
+  {
+    q: "Do you build WooCommerce stores?",
+    a: "Yes, I build WooCommerce stores with products, payments and checkout, plus delivery and ordering features for restaurants and takeaways.",
+  },
+  {
+    q: "Can you redesign my existing website?",
+    a: "Yes, I rebuild old websites into fast, modern WordPress sites, keeping your content and working to protect your Google rankings.",
+  },
+  {
+    q: "Do you offer WordPress maintenance after launch?",
+    a: "Yes, I offer monthly care plans with updates, backups, security checks and fixes, so your website stays fast, secure and online.",
+  },
+];
+
 export default function WordPressDevelopmentServicesPage() {
   return (
     <>
@@ -222,7 +332,12 @@ export default function WordPressDevelopmentServicesPage() {
               <div className="mx-auto h-[3px] w-32 rounded-full bg-gradient-brand md:mx-0"></div>
               {/* Intro paragraph */}
               <p className="mx-auto max-w-[600px] text-base text-[var(--text-secondary)] md:mx-0 md:text-lg">
-                WordPress development services that actually ship. Most WordPress websites never get finished properly. They get stuck with slow themes, bloated plugins and endless revisions, while your idea waits and competitors move ahead. I fix that. As a freelance WordPress developer, I handle WordPress website development and small business website design end to end: fast custom WordPress websites, WooCommerce stores and Elementor pages that launch in weeks, not months, and keep growing with your business.
+                WordPress development services build and manage your WordPress
+                website so it works for your business: custom design,
+                WooCommerce stores, speed, security and ongoing care. I build
+                fast WordPress websites for small businesses in the US and UK,
+                from the first page to launch and beyond, so your website
+                brings in calls, bookings and sales instead of sitting there.
               </p>
               {/* Buttons */}
               <div className="flex gap-4 justify-center md:justify-start">
@@ -244,7 +359,7 @@ export default function WordPressDevelopmentServicesPage() {
                 </a>
               </div>
             </div>
-            {/* Right column — WordPressVisual */}
+            {/* Right column - WordPressVisual */}
             <div className="relative flex items-center justify-center">
               <div
                 aria-hidden="true"
@@ -275,9 +390,9 @@ export default function WordPressDevelopmentServicesPage() {
                   key={service.title}
                   className="svc group relative h-full overflow-hidden rounded-2xl border border-black/10 bg-black/[0.04] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.30)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04]"
                 >
-                  {/* Glow blob — stats jaisa */}
+                  {/* Glow blob - stats jaisa */}
                   <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full bg-[#6E73BE]/10 blur-xl transition-all duration-[350ms] group-hover:bg-[#6E73BE]/25"></div>
-                  {/* Left bar — top se bottom draw */}
+                  {/* Left bar - top se bottom draw */}
                   <span
                     aria-hidden="true"
                     className="absolute left-0 top-0 h-full w-[2px] origin-top scale-y-0 rounded-l-xl bg-[var(--primary)] transition-transform duration-[350ms] group-hover:scale-y-100"
@@ -294,6 +409,219 @@ export default function WordPressDevelopmentServicesPage() {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Who it's for ── */}
+        <section className="relative py-24">
+          <div className="mx-auto max-w-6xl px-6">
+            <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
+              WHO IT&apos;S FOR
+            </p>
+            <h2 className="mt-4 font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
+              Who It&apos;s For
+            </h2>
+            <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
+              I build WordPress websites for small businesses in the US and
+              UK. These are the businesses I work with most.
+            </p>
+            <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl border border-black/10 bg-black/[0.04] p-5 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04]">
+                <h3 className="font-display text-xl font-bold text-[var(--text-primary)]">
+                  Small Businesses
+                </h3>
+                <p className="mt-2 text-[var(--text-secondary)]">
+                  Small businesses need a website that brings in calls and
+                  bookings, not just a brochure. I build WordPress websites
+                  with clear services, contact forms and booking options, so
+                  visitors become customers. Your site loads fast, looks
+                  professional and is easy to update.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-black/10 bg-black/[0.04] p-5 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04]">
+                <h3 className="font-display text-xl font-bold text-[var(--text-primary)]">
+                  Restaurants &amp; Takeaways
+                </h3>
+                <p className="mt-2 text-[var(--text-secondary)]">
+                  Restaurants and takeaways need online ordering that works. I
+                  build WordPress and WooCommerce sites with menus, ordering
+                  and delivery, so customers order straight from your website
+                  instead of paying commission to an app. Your menu is easy to
+                  update and your orders come straight to you.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-black/10 bg-black/[0.04] p-5 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04]">
+                <h3 className="font-display text-xl font-bold text-[var(--text-primary)]">
+                  Online Stores
+                </h3>
+                <p className="mt-2 text-[var(--text-secondary)]">
+                  Online stores need checkout that just works. I build
+                  WooCommerce stores with products, payments and delivery
+                  options, plus the extras your shop needs, like product
+                  add-ons and discounts. Your store stays fast and secure while
+                  you focus on selling.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-black/10 bg-black/[0.04] p-5 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04]">
+                <h3 className="font-display text-xl font-bold text-[var(--text-primary)]">
+                  Coaches &amp; Consultants
+                </h3>
+                <p className="mt-2 text-[var(--text-secondary)]">
+                  Coaches, consultants and course creators need bookings and
+                  payments without the admin. I build WordPress sites with
+                  booking calendars, membership areas and course pages, so
+                  clients book and pay while you do the work.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-black/10 bg-black/[0.04] p-5 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04] sm:col-span-2">
+                <h3 className="font-display text-xl font-bold text-[var(--text-primary)]">
+                  Other Businesses
+                </h3>
+                <p className="mt-2 text-[var(--text-secondary)]">
+                  Don&apos;t see your business here? If you need a website
+                  that brings in customers, WordPress fits. Tell me what your
+                  business does and I will build the site around the way you
+                  work.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Related services ── */}
+        <p className="mx-auto max-w-6xl px-6 text-[var(--text-secondary)]">
+          Need automation behind your website? See my{" "}
+          <a
+            href="https://www.sohailworks.com/gohighlevel-expert"
+            className="font-medium text-[var(--primary)] underline decoration-[var(--primary)]/40 underline-offset-4 transition-colors hover:text-[var(--primary-hover)] hover:decoration-[var(--primary)]"
+          >
+            GoHighLevel expert services
+          </a>
+          .
+        </p>
+        <p className="mx-auto max-w-6xl px-6 pt-2 text-[var(--text-secondary)]">
+          Need a custom app instead of WordPress? See my{" "}
+          <a
+            href="https://www.sohailworks.com/web-app-development-services"
+            className="font-medium text-[var(--primary)] underline decoration-[var(--primary)]/40 underline-offset-4 transition-colors hover:text-[var(--primary-hover)] hover:decoration-[var(--primary)]"
+          >
+            web app development services
+          </a>
+          .
+        </p>
+
+        {/* ── How you work ── */}
+        <section className="relative pb-24 pt-8">
+          <div className="mx-auto max-w-6xl px-6">
+            <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
+              HOW WE WORK
+            </p>
+            <h2 className="mt-4 font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
+              How We Work Together
+            </h2>
+            <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
+              Share your requirements on a free call and I&apos;ll give you a
+              fixed quote before we start, no hourly billing.
+            </p>
+            <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {HOW_STEPS.map((step) => (
+                <div
+                  key={step.num}
+                  className="group relative h-full overflow-hidden rounded-2xl border border-black/10 bg-black/[0.04] p-5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#6E73BE]/60 hover:shadow-[0_0_25px_rgba(110,115,190,0.25)] dark:border-white/10 dark:bg-white/[0.04] active:-translate-y-1 active:border-[#6E73BE]/60"
+                >
+                  <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full bg-[#6E73BE]/10 blur-xl transition-all duration-300 group-hover:bg-[#6E73BE]/25"></div>
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#6E73BE]/30 bg-[#6E73BE]/10 text-[#6E73BE] transition-transform duration-300 group-hover:scale-110">
+                      <step.icon className="h-6 w-6" />
+                    </div>
+                    <div className="flex flex-col gap-1 text-left">
+                      <p className="font-display text-3xl font-bold tracking-tight text-[var(--text-primary)]">
+                        {step.num}
+                      </p>
+                      <p className="text-base font-medium text-[var(--text-primary)]">
+                        {step.title}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-sm text-black/60 dark:text-white/60">
+                    {step.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── One real example ── */}
+        <section className="relative pb-24 pt-8">
+          <div className="mx-auto max-w-6xl px-6">
+            <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
+              ONE REAL EXAMPLE
+            </p>
+            <h2 className="mt-4 font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
+              Sizzlers: a takeaway website that takes orders online
+            </h2>
+            <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
+              Sizzlers is a takeaway in Bo&apos;ness, Scotland. I built their
+              WordPress and WooCommerce website with online ordering, menus and
+              delivery, plus signature-sauce options on every product. New
+              website orders print straight to the kitchen printer, so the team
+              sees each order the moment it comes in.
+            </p>
+            <a
+              href="https://sizzlersboness.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-block font-medium text-[var(--primary)] underline decoration-[var(--primary)]/40 underline-offset-4 transition-colors hover:text-[var(--primary-hover)] hover:decoration-[var(--primary)]"
+            >
+              Visit sizzlersboness.co.uk
+            </a>
+          </div>
+        </section>
+
+        {/* ── FAQ ── */}
+        <section className="relative pb-24 pt-8">
+          <div className="mx-auto max-w-6xl px-6">
+            <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
+              FAQ
+            </p>
+            <h2 className="mt-4 font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
+              WordPress Questions, Answered
+            </h2>
+            <div className="mt-12">
+              <FaqAccordion faqs={WP_FAQS} />
+            </div>
+          </div>
+        </section>
+
+        {/* ── Final CTA ── */}
+        <section className="relative pb-24 pt-8">
+          <div className="mx-auto max-w-6xl px-6 text-center">
+            <h2 className="font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
+              Ready for a website that brings in customers?
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-[var(--text-secondary)]">
+              Tell me about your business and I will send a clear plan,
+              timeline and price.
+            </p>
+            <div className="mt-8 flex justify-center gap-4">
+              <a
+                href="https://cal.com/sohail-qeijwg/book-a-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl bg-[var(--secondary)] px-6 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:bg-[var(--secondary-hover)] active:-translate-y-1 active:bg-[var(--secondary-hover)] active:scale-95"
+              >
+                Book a Free Call
+              </a>
+              <a
+                href="https://wa.me/447512281222"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-[var(--border-default)] px-6 py-3 font-medium text-[var(--text-primary)] transition-all hover:-translate-y-1 hover:border-[var(--primary)] hover:text-[var(--primary)] active:-translate-y-1 active:border-[var(--primary)] active:text-[var(--primary)]"
+              >
+                WhatsApp Me
+              </a>
             </div>
           </div>
         </section>

@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 const Footer = dynamic(() => import("@/components/Footer"));
 import { GHLWorkflowVisual } from "@/components/GHLWorkflowVisual";
 import { VsHubSpotVisual } from "@/components/VsHubSpotVisual";
-import GhlFaq from "@/components/GhlFaq";
+import FaqAccordion from "@/components/FaqAccordion";
 import {
   Filter,
   Code2,
@@ -276,6 +276,30 @@ const HOW_STEPS = [
     num: "05",
     title: "Support",
     desc: "I stay available after launch to fix issues and help with updates.",
+  },
+];
+
+// ─── ─── GHL FAQ ─── ───
+const GHL_FAQS = [
+  {
+    q: "What does a GoHighLevel expert do?",
+    a: "A GoHighLevel expert sets up and manages your GHL account so it works for your business: CRM and pipelines, funnels and landing pages, automated follow-up by text and email, booking calendars and review requests. I also fix broken GHL setups.",
+  },
+  {
+    q: "What can GoHighLevel do for my business?",
+    a: "GoHighLevel brings your funnels, CRM, email, SMS, and bookings into one place. I set up funnels that capture leads, automations that follow up instantly, and pipelines that keep every lead organised so no enquiry slips through.",
+  },
+  {
+    q: "How much does a GoHighLevel setup cost?",
+    a: "It depends on the scope. A basic funnel and CRM setup costs less than a full automation build. Share your requirements on a free call and I'll give you a fixed quote before we start, no hourly billing.",
+  },
+  {
+    q: "How long does a GoHighLevel setup take?",
+    a: "A standard GoHighLevel setup takes about a week, and more complex builds with AI agents or migrations take longer. You'll get a clear timeline before we start.",
+  },
+  {
+    q: "Do you work with roofers, HVAC, plumbers and other local businesses?",
+    a: "Yes, I mainly work with local service businesses in the US & UK: roofers, HVAC, plumbers, med spas, cleaning, builders and electricians. If your business runs on leads, bookings and follow-ups, GoHighLevel fits.",
   },
 ];
 
@@ -586,7 +610,7 @@ export default function GoHighLevelPage() {
               GoHighLevel Questions, Answered
             </h2>
             <div className="mt-12">
-              <GhlFaq />
+              <FaqAccordion faqs={GHL_FAQS} />
             </div>
           </div>
         </section>
