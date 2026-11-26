@@ -24,5 +24,11 @@ export default function sitemap() {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: "https://www.sohailworks.com/guides/how-to-hire-a-gohighlevel-expert",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }
