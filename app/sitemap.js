@@ -30,5 +30,11 @@ export default function sitemap() {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: "https://www.sohailworks.com/guides/gohighlevel-setup-cost",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }

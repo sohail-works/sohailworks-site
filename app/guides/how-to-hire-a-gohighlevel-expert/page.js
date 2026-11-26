@@ -4,6 +4,7 @@
 // After push: add this URL to the sitemap (5th URL) and request indexing once in GSC.
 
 import dynamic from "next/dynamic";
+import { GHLWorkflowVisual } from "@/components/GHLWorkflowVisual";
 import FaqAccordion from "@/components/FaqAccordion";
 import {
   ClipboardList,
@@ -254,27 +255,36 @@ export default function HowToHireAGoHighLevelExpertPage() {
       <main className="m-10 mx-auto w-full lg:max-w-7xl">
         {/* ── Hero ── */}
         <section className="relative pb-16 pt-8">
-          <div className="mx-auto max-w-6xl px-6">
-            <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
-              GUIDES / GOHIGHLEVEL
-            </p>
-            <h1 className="mt-4 font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
-              How to Hire a GoHighLevel Expert: A Checklist
-            </h1>
-            <p className="mt-4 max-w-2xl text-[var(--text-secondary)]">
-              A GoHighLevel expert sets up your funnels, CRM and automation so
-              no lead ever goes cold. Hiring the wrong person buys you a tool
-              you cannot use. Hiring the right person buys you a system that
-              answers missed calls, follows up automatically and shows you
-              every lead in one place. Ask these five questions first, and the
-              difference becomes obvious.
-            </p>
-            <p className="mt-4 max-w-2xl text-[var(--text-secondary)]">
-              This checklist is written for local service businesses in the US
-              and UK, roofers, plumbers, HVAC, med spas, cleaning, builders
-              and electricians. If your business runs on calls, quotes and
-              bookings, it fits you.
-            </p>
+          <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-2">
+            <div>
+              <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
+                GUIDES / GOHIGHLEVEL
+              </p>
+              <h1 className="mt-4 font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
+                How to Hire a GoHighLevel Expert: A Checklist
+              </h1>
+              <p className="mt-4 max-w-2xl text-[var(--text-secondary)]">
+                A GoHighLevel expert sets up your funnels, CRM and automation
+                so no lead ever goes cold. Hiring the wrong person buys you a
+                tool you cannot use. Hiring the right person buys you a system
+                that answers missed calls, follows up automatically and shows
+                you every lead in one place. Ask these five questions first,
+                and the difference becomes obvious.
+              </p>
+              <p className="mt-4 max-w-2xl text-[var(--text-secondary)]">
+                This checklist is written for local service businesses in the
+                US and UK, roofers, plumbers, HVAC, med spas, cleaning,
+                builders and electricians. If your business runs on calls,
+                quotes and bookings, it fits you.
+              </p>
+            </div>
+            <div className="relative flex items-center justify-center">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#F97316] opacity-25 blur-3xl"
+              />
+              <GHLWorkflowVisual />
+            </div>
           </div>
         </section>
 
