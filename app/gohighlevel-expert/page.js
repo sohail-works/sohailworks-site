@@ -525,6 +525,18 @@ export default function GoHighLevelPage() {
           .
         </p>
 
+        {/* ── Related guide ── */}
+        <p className="mx-auto max-w-6xl px-6 pb-8 text-[var(--text-secondary)]">
+          Not sure how to pick the right person? Read my guide on{" "}
+          <a
+            href="https://www.sohailworks.com/guides/how-to-hire-a-gohighlevel-expert"
+            className="text-[var(--primary)] underline underline-offset-2 hover:opacity-80"
+          >
+            how to hire a GoHighLevel expert
+          </a>
+          .
+        </p>
+
         {/* ── GoHighLevel vs HubSpot ── */}
         <section className="relative pb-24 pt-8">
           <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-2">
