@@ -537,6 +537,18 @@ export default function GoHighLevelPage() {
           .
         </p>
 
+        {/* ── Related guide: setup cost ── */}
+        <p className="mx-auto max-w-6xl px-6 pb-8 text-[var(--text-secondary)]">
+          Want to understand the price first? Read my guide on{" "}
+          <a
+            href="https://www.sohailworks.com/guides/gohighlevel-setup-cost"
+            className="text-[var(--primary)] underline underline-offset-2 hover:opacity-80"
+          >
+            what affects the cost of a GoHighLevel setup
+          </a>
+          .
+        </p>
+
         {/* ── GoHighLevel vs HubSpot ── */}
         <section className="relative pb-24 pt-8">
           <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-2">

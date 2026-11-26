@@ -4,7 +4,7 @@
 // After push: add this URL to the sitemap (6th URL) and request indexing once in GSC.
 
 import dynamic from "next/dynamic";
-import { GHLWorkflowVisual } from "@/components/GHLWorkflowVisual";
+import { GHLSetupCostVisual } from "@/components/GHLSetupCostVisual";
 import FaqAccordion from "@/components/FaqAccordion";
 import {
   LayoutDashboard,
@@ -287,7 +287,7 @@ export default function GoHighLevelSetupCostPage() {
                 aria-hidden="true"
                 className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#F97316] opacity-25 blur-3xl"
               />
-              <GHLWorkflowVisual />
+              <GHLSetupCostVisual />
             </div>
           </div>
         </section>
