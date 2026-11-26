@@ -28,6 +28,11 @@ import {
   ClipboardList,
   Hammer,
   Headphones,
+  ListChecks,
+  Calculator,
+  PhoneMissed,
+  Scale,
+  ArrowRight,
 } from "lucide-react";
 
 export const metadata = {
@@ -303,6 +308,39 @@ const GHL_FAQS = [
   },
 ];
 
+const RELATED_GUIDES = [
+  {
+    icon: ListChecks,
+    title: "How to Hire a GoHighLevel Expert: A Checklist",
+    desc: "Five questions to ask before you hire anyone, and the red flags to avoid.",
+    href: "https://www.sohailworks.com/guides/how-to-hire-a-gohighlevel-expert",
+  },
+  {
+    icon: Calculator,
+    title: "What Affects the Cost of a GoHighLevel Setup?",
+    desc: "The six factors that move the price, and how a fixed quote works.",
+    href: "https://www.sohailworks.com/guides/gohighlevel-setup-cost",
+  },
+  {
+    icon: PhoneMissed,
+    title: "GoHighLevel Missed-Call Text-Back: How to Set It Up",
+    desc: "Never lose a lead to a missed call again. Five steps to set it up.",
+    href: "https://www.sohailworks.com/guides/gohighlevel-missed-call-text-back",
+  },
+  {
+    icon: Scale,
+    title: "GoHighLevel vs Jobber and Housecall Pro",
+    desc: "Jobber and Housecall Pro run the job. GoHighLevel runs everything around it.",
+    href: "https://www.sohailworks.com/guides/gohighlevel-vs-jobber",
+  },
+  {
+    icon: Globe,
+    title: "WordPress or GoHighLevel for a Local Business Website?",
+    desc: "Which one fits your business website, and when to use both.",
+    href: "https://www.sohailworks.com/guides/wordpress-or-gohighlevel",
+  },
+];
+
 export default function GoHighLevelPage() {
   return (
     <>
@@ -410,9 +448,9 @@ export default function GoHighLevelPage() {
                   key={service.title}
                   className="svc group relative h-full overflow-hidden rounded-2xl border border-black/10 bg-black/[0.04] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.30)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04]"
                 >
-                  {/* Glow blob — stats jaisa */}
+                  {/* Glow blob - stats jaisa */}
                   <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full bg-[#6E73BE]/10 blur-xl transition-all duration-[350ms] group-hover:bg-[#6E73BE]/25"></div>
-                  {/* Left bar — top se bottom draw */}
+                  {/* Left bar - top se bottom draw */}
                   <span
                     aria-hidden="true"
                     className="absolute left-0 top-0 h-full w-[2px] origin-top scale-y-0 rounded-l-xl bg-[var(--primary)] transition-transform duration-[350ms] group-hover:scale-y-100"
@@ -525,29 +563,51 @@ export default function GoHighLevelPage() {
           .
         </p>
 
-        {/* ── Related guide ── */}
-        <p className="mx-auto max-w-6xl px-6 pb-8 text-[var(--text-secondary)]">
-          Not sure how to pick the right person? Read my guide on{" "}
-          <a
-            href="https://www.sohailworks.com/guides/how-to-hire-a-gohighlevel-expert"
-            className="text-[var(--primary)] underline underline-offset-2 hover:opacity-80"
-          >
-            how to hire a GoHighLevel expert
-          </a>
-          .
-        </p>
-
-        {/* ── Related guide: setup cost ── */}
-        <p className="mx-auto max-w-6xl px-6 pb-8 text-[var(--text-secondary)]">
-          Want to understand the price first? Read my guide on{" "}
-          <a
-            href="https://www.sohailworks.com/guides/gohighlevel-setup-cost"
-            className="text-[var(--primary)] underline underline-offset-2 hover:opacity-80"
-          >
-            what affects the cost of a GoHighLevel setup
-          </a>
-          .
-        </p>
+        {/* ── Related guides ── */}
+        <section className="pb-24 pt-4">
+          <div className="mx-auto max-w-6xl px-6">
+            <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
+              RELATED GUIDES
+            </p>
+            <h2 className="mt-4 font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
+              Read before you decide
+            </h2>
+            <p className="mt-4 max-w-xl text-[var(--text-secondary)]">
+              Short guides that answer the questions every business owner asks
+              before hiring GoHighLevel help.
+            </p>
+            <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {RELATED_GUIDES.map((guide) => (
+                <div
+                  key={guide.title}
+                  className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-black/[0.04] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.30)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04]"
+                >
+                  <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full bg-[#6E73BE]/10 blur-xl transition-all duration-[350ms] group-hover:bg-[#6E73BE]/25"></div>
+                  <span
+                    aria-hidden="true"
+                    className="absolute left-0 top-0 h-full w-[2px] origin-top scale-y-0 rounded-l-xl bg-[var(--primary)] transition-transform duration-[350ms] group-hover:scale-y-100"
+                  />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--primary)]/10 text-[var(--primary)] transition-colors duration-[350ms] group-hover:bg-[var(--primary)] group-hover:text-white">
+                    <guide.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-4 font-display text-base font-bold text-[var(--text-primary)]">
+                    {guide.title}
+                  </h3>
+                  <p className="mt-1 flex-1 text-sm text-[var(--text-secondary)]">
+                    {guide.desc}
+                  </p>
+                  <a
+                    href={guide.href}
+                    className="mt-5 inline-flex w-fit items-center gap-2 rounded-xl bg-[var(--primary)] px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  >
+                    Read the guide
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* ── GoHighLevel vs HubSpot ── */}
         <section className="relative pb-24 pt-8">
