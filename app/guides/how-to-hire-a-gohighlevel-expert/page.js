@@ -4,7 +4,7 @@
 // After push: add this URL to the sitemap (5th URL) and request indexing once in GSC.
 
 import dynamic from "next/dynamic";
-import { GHLWorkflowVisual } from "@/components/GHLWorkflowVisual";
+import { HireExpertVisual } from "@/components/HireExpertVisual";
 import FaqAccordion from "@/components/FaqAccordion";
 import {
   ClipboardList,
@@ -137,7 +137,7 @@ const jsonLd = [
   },
 ];
 
-// ─── ─── Data ─── ───
+// --- --- Data --- ---
 const CHECKLIST = [
   {
     icon: ClipboardList,
@@ -253,7 +253,7 @@ export default function HowToHireAGoHighLevelExpertPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main className="m-10 mx-auto w-full lg:max-w-7xl">
-        {/* ── Hero ── */}
+        {/* -- Hero -- */}
         <section className="relative pb-16 pt-8">
           <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-2">
             <div>
@@ -283,12 +283,12 @@ export default function HowToHireAGoHighLevelExpertPage() {
                 aria-hidden="true"
                 className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#F97316] opacity-25 blur-3xl"
               />
-              <GHLWorkflowVisual />
+              <HireExpertVisual />
             </div>
           </div>
         </section>
 
-        {/* ── The checklist ── */}
+        {/* -- The checklist -- */}
         <section className="relative pb-24 pt-8">
           <div className="mx-auto max-w-6xl px-6">
             <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
@@ -360,7 +360,7 @@ export default function HowToHireAGoHighLevelExpertPage() {
           </div>
         </section>
 
-        {/* ── Red flags ── */}
+        {/* -- Red flags -- */}
         <section className="relative pb-24 pt-8">
           <div className="mx-auto max-w-6xl px-6">
             <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
@@ -390,7 +390,7 @@ export default function HowToHireAGoHighLevelExpertPage() {
           </div>
         </section>
 
-        {/* ── Week one ── */}
+        {/* -- Week one -- */}
         <section className="relative pb-24 pt-8">
           <div className="mx-auto max-w-6xl px-6">
             <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
@@ -424,7 +424,7 @@ export default function HowToHireAGoHighLevelExpertPage() {
           </div>
         </section>
 
-        {/* ── FAQ ── */}
+        {/* -- FAQ -- */}
         <section className="relative pb-24 pt-8">
           <div className="mx-auto max-w-6xl px-6">
             <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
@@ -439,7 +439,7 @@ export default function HowToHireAGoHighLevelExpertPage() {
           </div>
         </section>
 
-        {/* ── Final CTA ── */}
+        {/* -- Final CTA -- */}
         <section className="relative pb-24 pt-8">
           <div className="mx-auto max-w-6xl px-6 text-center">
             <h2 className="font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">

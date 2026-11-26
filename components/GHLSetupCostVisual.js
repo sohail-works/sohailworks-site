@@ -1,4 +1,4 @@
-// ─── ─── GHLSetupCostVisual — Guide 2 hero visual ─── ───
+// --- --- GHLSetupCostVisual - Guide 2 hero visual --- ---
 // Same family as GHLWorkflowVisual / WordPressVisual / FrontendCodeVisual:
 // Tag, dot-grid card, --border-subtle / --bg-elevated / --text-muted tokens,
 // brand orange var(--primary) + periwinkle #6E73BE. No new CSS classes,

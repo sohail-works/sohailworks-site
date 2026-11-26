@@ -135,7 +135,7 @@ const jsonLd = [
   },
 ];
 
-// ─── ─── Data ─── ───
+// --- --- Data --- ---
 const COST_FACTORS = [
   {
     icon: LayoutDashboard,
@@ -258,7 +258,7 @@ export default function GoHighLevelSetupCostPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main className="m-10 mx-auto w-full lg:max-w-7xl">
-        {/* ── Hero ── */}
+        {/* -- Hero -- */}
         <section className="relative pb-16 pt-8">
           <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-2">
             <div>
@@ -292,7 +292,7 @@ export default function GoHighLevelSetupCostPage() {
           </div>
         </section>
 
-        {/* ── Cost factors ── */}
+        {/* -- Cost factors -- */}
         <section className="relative pb-24 pt-8">
           <div className="mx-auto max-w-6xl px-6">
             <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
@@ -364,7 +364,7 @@ export default function GoHighLevelSetupCostPage() {
           </div>
         </section>
 
-        {/* ── Cost traps ── */}
+        {/* -- Cost traps -- */}
         <section className="relative pb-24 pt-8">
           <div className="mx-auto max-w-6xl px-6">
             <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
@@ -394,7 +394,7 @@ export default function GoHighLevelSetupCostPage() {
           </div>
         </section>
 
-        {/* ── What is included ── */}
+        {/* -- What is included -- */}
         <section className="relative pb-24 pt-8">
           <div className="mx-auto max-w-6xl px-6">
             <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
@@ -429,7 +429,7 @@ export default function GoHighLevelSetupCostPage() {
           </div>
         </section>
 
-        {/* ── FAQ ── */}
+        {/* -- FAQ -- */}
         <section className="relative pb-24 pt-8">
           <div className="mx-auto max-w-6xl px-6">
             <p className="font-mono text-xs tracking-[0.2em] text-[var(--text-muted)]">
@@ -444,7 +444,7 @@ export default function GoHighLevelSetupCostPage() {
           </div>
         </section>
 
-        {/* ── Final CTA ── */}
+        {/* -- Final CTA -- */}
         <section className="relative pb-24 pt-8">
           <div className="mx-auto max-w-6xl px-6 text-center">
             <h2 className="font-display text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
