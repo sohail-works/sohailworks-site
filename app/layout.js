@@ -38,11 +38,20 @@ export const metadata = {
     url: "https://www.sohailworks.com",
     siteName: "SohailWorks",
     type: "website",
+    images: [
+      {
+        url: "https://www.sohailworks.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "SohailWorks — GoHighLevel Expert, WordPress & Next.js Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "SohailWorks | GoHighLevel Expert, WordPress & Next.js Developer",
     description: "GoHighLevel expert for US & UK small businesses: GHL funnels, automation & CRM, plus WordPress sites and Next.js apps. 5+ years, 100+ orders. Get a quote.",
+    images: ["https://www.sohailworks.com/og-image.jpg"],
   },
 };
 
