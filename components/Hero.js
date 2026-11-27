@@ -121,7 +121,7 @@ export default function Hero() {
           </div>
 
           {/* Heading */}
-          <h1 className="font-display text-center text-3xl font-normal capitalize leading-snug md:text-left md:text-5xl md:leading-tight">
+          <h1 className="font-display text-center text-2xl font-normal capitalize leading-snug md:text-left md:text-5xl md:leading-tight">
             I build websites and
             <br />
             GoHighLevel systems
