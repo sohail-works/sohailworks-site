@@ -8,6 +8,15 @@
 - [WordPress Development Services](https://www.sohailworks.com/wordpress-development-services): Custom WordPress websites, Elementor and Elementor Pro, WooCommerce development, custom themes, performance and responsive optimisation.
 - [Web App Development Services](https://www.sohailworks.com/web-app-development-services): React.js development, Next.js websites and applications, responsive UI, reusable components, API integration.
 
+## Guides
+
+- [How to Hire a GoHighLevel Expert: A Checklist](https://www.sohailworks.com/guides/how-to-hire-a-gohighlevel-expert): Five questions to ask before hiring a GoHighLevel expert, what a good answer sounds like, and five red flags.
+- [What Affects the Cost of a GoHighLevel Setup?](https://www.sohailworks.com/guides/gohighlevel-setup-cost): Six cost factors, five pricing traps, and what is usually included in a GoHighLevel setup.
+- [GoHighLevel Missed-Call Text-Back: How to Set It Up](https://www.sohailworks.com/guides/gohighlevel-missed-call-text-back): Missed-call text-back setup in GoHighLevel, step by step.
+- [GoHighLevel vs Jobber and Housecall Pro](https://www.sohailworks.com/guides/gohighlevel-vs-jobber): GoHighLevel compared with Jobber and Housecall Pro for local service businesses.
+- [WordPress or GoHighLevel for a Local Business Website](https://www.sohailworks.com/guides/wordpress-or-gohighlevel): WordPress or GoHighLevel, which one fits a local business website.
+- [Custom Web App or WordPress](https://www.sohailworks.com/guides/custom-web-app-vs-wordpress): Custom web app or WordPress, which one fits your project.
+
 ## Who I Work With
 
 - Local service businesses in the US and UK: roofers, HVAC, plumbers, med spas, cleaning companies, builders and electricians.
