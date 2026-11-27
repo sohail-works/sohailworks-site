@@ -13,7 +13,6 @@ import {
   Rocket,
   Search,
   Sparkles,
-  Star,
 } from "lucide-react";
 
 // ─── ─── Data ─── ───
@@ -167,11 +166,6 @@ export default function About() {
               </span>
             </div>
 
-            {/* Rating */}
-            <p className="mt-4 flex items-center justify-center gap-1.5 font-medium text-[var(--text-primary)]">
-              <Star className="h-4 w-4 fill-current text-[var(--primary)]" />
-              4.8/5.0 (46 reviews)
-            </p>
             <p className="mt-2 text-sm text-[var(--text-muted)]">
               Member since 2021 &middot; Fluent English
             </p>
