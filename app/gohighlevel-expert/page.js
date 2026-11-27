@@ -377,7 +377,7 @@ export default function GoHighLevelPage() {
 
               {/* Intro */}
               <p className="mx-auto max-w-[600px] text-base text-[var(--text-secondary)] md:mx-0 md:text-lg">
-                A GoHighLevel expert sets up and manages your GoHighLevel
+                As a go high level expert, I set up and manage your GoHighLevel
                 account so it works for your business: CRM and pipelines,
                 funnels and landing pages, automated follow-up by text and
                 email, booking calendars and review requests. Most businesses
