@@ -1,6 +1,6 @@
 // FigmaToWpVisual: guide hero visual, same family as NextVsReactVisual.
 
-import { Figma, ArrowRight, Check } from "lucide-react";
+import { PenTool, ArrowRight, Check } from "lucide-react";
 
 const Tag = ({ children }) => (
   <span className="rounded-sm border border-[var(--border-subtle)] bg-[var(--bg-elevated)] px-2 py-1 font-mono text-[10px] tracking-[0.14em] text-[var(--text-muted)]">
@@ -33,7 +33,7 @@ export function FigmaToWpVisual() {
           <div className="mt-5 grid grid-cols-[1fr_auto_1fr] items-center gap-2">
             <div className="rounded-md border border-[var(--border-subtle)] bg-[var(--bg-elevated)] p-3">
               <div className="flex items-center gap-2">
-                <Figma className="h-5 w-5 shrink-0 text-[var(--primary)]" />
+                <PenTool className="h-5 w-5 shrink-0 text-[var(--primary)]" />
                 <span className="font-display text-sm font-bold text-[var(--text-primary)]">
                   Figma
                 </span>
