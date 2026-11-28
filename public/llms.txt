@@ -16,6 +16,10 @@
 - [GoHighLevel vs Jobber and Housecall Pro](https://www.sohailworks.com/guides/gohighlevel-vs-jobber): GoHighLevel compared with Jobber and Housecall Pro for local service businesses.
 - [WordPress or GoHighLevel for a Local Business Website](https://www.sohailworks.com/guides/wordpress-or-gohighlevel): WordPress or GoHighLevel, which one fits a local business website.
 - [Custom Web App or WordPress](https://www.sohailworks.com/guides/custom-web-app-vs-wordpress): Custom web app or WordPress, which one fits your project.
+- [Next.js vs React: Which One Should Your Business Choose?](https://www.sohailworks.com/guides/next-js-vs-react): Next.js compared with React for a business web app or website, speed, SEO, cost and maintenance.
+- [WordPress.org vs WordPress.com: Which One Is Right for Your Business?](https://www.sohailworks.com/guides/wordpress-org-vs-wordpress-com): WordPress.org compared with WordPress.com, ownership, plugins, SEO control and long-term cost.
+- [How Much Does It Cost to Build an MVP?](https://www.sohailworks.com/guides/how-much-does-it-cost-to-build-an-mvp): What affects the cost of building an MVP and how to keep it lean.
+- [How Much Does It Cost to Hire a React Developer?](https://www.sohailworks.com/guides/how-much-does-it-cost-to-hire-a-react-developer): What affects the cost of hiring a React developer, fixed quote vs hourly billing.
 
 ## Who I Work With
 
