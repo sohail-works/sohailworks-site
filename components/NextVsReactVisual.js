@@ -1,9 +1,4 @@
-// --- --- NextVsReactVisual: Guide hero visual --- ---
-// Same family as HireExpertVisual / GHLSetupCostVisual / WordPressVisual:
-// Tag, dot-grid card, --border-subtle / --bg-elevated / --text-muted tokens,
-// brand orange var(--primary) + periwinkle #6E73BE. No new CSS classes,
-// no photos, no AI images, no em dashes anywhere in this file.
-// Destination file: components/NextVsReactVisual.js
+// NextVsReactVisual: guide hero visual, same family as HireExpertVisual.
 
 import { Atom, Layers, Check } from "lucide-react";
 
