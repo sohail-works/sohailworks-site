@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import { FigmaToWpVisual } from "@/components/FigmaToWpVisual";
 import FaqAccordion from "@/components/FaqAccordion";
 import {
-  Figma,
   Palette,
   LayoutTemplate,
   Smartphone,
@@ -136,7 +135,7 @@ const jsonLd = [
 // --- --- Data --- ---
 const BASICS = [
   {
-    icon: Figma,
+    icon: PenTool,
     title: "What the conversion is",
     desc: "Figma is where designers draw the site. WordPress is where it lives and works. The conversion is the job of turning those drawings into real pages: the header, the hero, the service cards, the forms, all built as a WordPress theme that loads fast and works on phones. It is not an export button. It is a build, done by hand, from the design.",
   },
@@ -172,7 +171,7 @@ const STEPS = [
 
 const PICKS = [
   {
-    icon: Figma,
+    icon: PenTool,
     title: "Convert the design when",
     desc: "You already have a finished Figma design you are happy with, including the mobile version. The design fits your business and your customers, and you just need it built properly. This is the fastest route to a site that looks like your brand instead of a template.",
     point: "Best for: finished designs with desktop and mobile versions.",
