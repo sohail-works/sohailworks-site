@@ -316,6 +316,12 @@ const WP_RELATED_GUIDES = [
     desc: "When WordPress is enough, and when your business outgrows it.",
     href: "https://www.sohailworks.com/guides/custom-web-app-vs-wordpress",
   },
+  {
+    icon: ArrowRightLeft,
+    title: "WordPress.org vs WordPress.com: Which One Is Right for Your Business?",
+    desc: "Own or rent? Ownership, plugins, SEO control and long-term cost, compared.",
+    href: "https://www.sohailworks.com/guides/wordpress-org-vs-wordpress-com",
+  },
 ];
 
 export default function WordPressDevelopmentServicesPage() {
