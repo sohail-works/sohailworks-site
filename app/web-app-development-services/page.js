@@ -320,6 +320,12 @@ const WEBAPP_RELATED_GUIDES = [
     desc: "What affects the cost of hiring a React developer, fixed quote vs hourly billing.",
     href: "https://www.sohailworks.com/guides/how-much-does-it-cost-to-hire-a-react-developer",
   },
+  {
+    icon: Users,
+    title: "React Developer for Hire: How to Find the Right One for Your Business",
+    desc: "What a React developer does, how to check their work, and freelancer vs agency.",
+    href: "https://www.sohailworks.com/guides/react-developer-for-hire",
+  },
 ];
 
 export default function WebAppDevelopmentServicesPage() {
