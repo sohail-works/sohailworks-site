@@ -20,6 +20,10 @@
 - [WordPress.org vs WordPress.com: Which One Is Right for Your Business?](https://www.sohailworks.com/guides/wordpress-org-vs-wordpress-com): WordPress.org compared with WordPress.com, ownership, plugins, SEO control and long-term cost.
 - [How Much Does It Cost to Build an MVP?](https://www.sohailworks.com/guides/how-much-does-it-cost-to-build-an-mvp): What affects the cost of building an MVP and how to keep it lean.
 - [How Much Does It Cost to Hire a React Developer?](https://www.sohailworks.com/guides/how-much-does-it-cost-to-hire-a-react-developer): What affects the cost of hiring a React developer, fixed quote vs hourly billing.
+- [WordPress Speed Optimization: How to Make Your Website Load Faster](https://www.sohailworks.com/guides/wordpress-speed-optimization): What slows a WordPress site down, the fixes that work, and when to get help.
+- [Figma to WordPress: How Your Design Becomes a Real Website](https://www.sohailworks.com/guides/figma-to-wordpress): How a Figma design becomes a fast, editable WordPress site, and when to convert or rebuild.
+- [WordPress Malware Removal: How to Clean a Hacked Website](https://www.sohailworks.com/guides/wordpress-malware-removal): How to spot a hacked WordPress site, how the cleanup works, and how to stop it happening again.
+- [React Developer for Hire: How to Find the Right One](https://www.sohailworks.com/guides/react-developer-for-hire): What a React developer does, how to check their work before you hire, and freelancer vs agency.
 
 ## Who I Work With
 
