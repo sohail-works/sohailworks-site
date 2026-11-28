@@ -60,5 +60,29 @@ export default function sitemap() {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: "https://www.sohailworks.com/guides/next-js-vs-react",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://www.sohailworks.com/guides/wordpress-org-vs-wordpress-com",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://www.sohailworks.com/guides/how-much-does-it-cost-to-build-an-mvp",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://www.sohailworks.com/guides/how-much-does-it-cost-to-hire-a-react-developer",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }
