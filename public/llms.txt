@@ -24,6 +24,10 @@
 - [Figma to WordPress: How Your Design Becomes a Real Website](https://www.sohailworks.com/guides/figma-to-wordpress): How a Figma design becomes a fast, editable WordPress site, and when to convert or rebuild.
 - [WordPress Malware Removal: How to Clean a Hacked Website](https://www.sohailworks.com/guides/wordpress-malware-removal): How to spot a hacked WordPress site, how the cleanup works, and how to stop it happening again.
 - [React Developer for Hire: How to Find the Right One](https://www.sohailworks.com/guides/react-developer-for-hire): What a React developer does, how to check their work before you hire, and freelancer vs agency.
+- [WordPress Local SEO: How Customers Near You Find You on Google](https://www.sohailworks.com/guides/wordpress-local-seo): How Google picks which local business shows up first, and what your site needs to rank near you.
+- [WooCommerce Website Development: How to Build an Online Store That Sells](https://www.sohailworks.com/guides/woocommerce-website-development): What a WooCommerce store needs, products, payments, delivery and checkout.
+- [Next.js Website Development: A Fast Website That Ranks on Google](https://www.sohailworks.com/guides/next-js-website-development): What a Next.js website is, why it loads fast and ranks well, and when to choose it.
+- [WooCommerce SEO: How to Get Your Products Found on Google](https://www.sohailworks.com/guides/woocommerce-seo): How Google finds and ranks your products, and what to fix on product pages.
 
 ## Who I Work With
 

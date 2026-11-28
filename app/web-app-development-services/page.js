@@ -326,6 +326,12 @@ const WEBAPP_RELATED_GUIDES = [
     desc: "What a React developer does, how to check their work, and freelancer vs agency.",
     href: "https://www.sohailworks.com/guides/react-developer-for-hire",
   },
+  {
+    icon: Zap,
+    title: "Next.js Website Development: A Fast Website That Ranks on Google",
+    desc: "What a Next.js website is, why it loads fast and ranks well, and when it is the right choice.",
+    href: "https://www.sohailworks.com/guides/next-js-website-development",
+  },
 ];
 
 export default function WebAppDevelopmentServicesPage() {

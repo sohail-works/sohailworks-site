@@ -4,6 +4,7 @@ import { VisualReveal } from "@/components/VisualReveal";
 import FaqAccordion from "@/components/FaqAccordion";
 import {
   Globe,
+  MapPin,
   LayoutTemplate,
   Palette,
   ShoppingCart,
@@ -339,6 +340,24 @@ const WP_RELATED_GUIDES = [
     title: "WordPress Malware Removal: How to Clean a Hacked Website",
     desc: "How to spot a hacked site, how the cleanup works, and how to stop it happening again.",
     href: "https://www.sohailworks.com/guides/wordpress-malware-removal",
+  },
+  {
+    icon: MapPin,
+    title: "WordPress Local SEO: How Customers Near You Find You on Google",
+    desc: "How Google picks which local business shows up first, and what your site needs to rank near you.",
+    href: "https://www.sohailworks.com/guides/wordpress-local-seo",
+  },
+  {
+    icon: ShoppingCart,
+    title: "WooCommerce Website Development: How to Build an Online Store That Sells",
+    desc: "Products, payments, delivery and checkout, and how to tell a good build from a bad one.",
+    href: "https://www.sohailworks.com/guides/woocommerce-website-development",
+  },
+  {
+    icon: Search,
+    title: "WooCommerce SEO: How to Get Your Products Found on Google",
+    desc: "How Google finds and ranks your products, and what to fix on product pages.",
+    href: "https://www.sohailworks.com/guides/woocommerce-seo",
   },
 ];
 
