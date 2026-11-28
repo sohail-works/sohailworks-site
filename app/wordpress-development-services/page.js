@@ -322,6 +322,24 @@ const WP_RELATED_GUIDES = [
     desc: "Own or rent? Ownership, plugins, SEO control and long-term cost, compared.",
     href: "https://www.sohailworks.com/guides/wordpress-org-vs-wordpress-com",
   },
+  {
+    icon: Gauge,
+    title: "WordPress Speed Optimization: How to Make Your Website Load Faster",
+    desc: "What slows your site down, the fixes that work, and when to get help.",
+    href: "https://www.sohailworks.com/guides/wordpress-speed-optimization",
+  },
+  {
+    icon: Palette,
+    title: "Figma to WordPress: How Your Design Becomes a Real Website",
+    desc: "How a design file becomes a fast, editable WordPress site.",
+    href: "https://www.sohailworks.com/guides/figma-to-wordpress",
+  },
+  {
+    icon: ShieldCheck,
+    title: "WordPress Malware Removal: How to Clean a Hacked Website",
+    desc: "How to spot a hacked site, how the cleanup works, and how to stop it happening again.",
+    href: "https://www.sohailworks.com/guides/wordpress-malware-removal",
+  },
 ];
 
 export default function WordPressDevelopmentServicesPage() {
